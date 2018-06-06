@@ -42,6 +42,18 @@
           "url": "https://s3.amazonaws.com/gravityforms/releases/gravityforms_2.3.2.2.zip?AWSAccessKeyId=1603BBK66770VCSCJSG2&Expires=1528409659&Signature=MvodP%2Fu2EFHGSpcACGOwZCeKqlc%3D"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wp-sync-db/wp-sync-db",
+        "type": "wordpress-plugin",
+        "version": "1.5",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/wp-sync-db/wp-sync-db/archive/1.5.zip"
+        }
+      }
     }
   ],
   "require": {
@@ -54,7 +66,8 @@
     "wpackagist-plugin/contact-form-7": "5.0",
     "wpackagist-plugin/mailchimp-for-wp": "4.2.1",
     "wpackagist-plugin/boxzilla": "3.2.2",
-    "gravityforms/gravityforms": "2.3.2.2"
+    "gravityforms/gravityforms": "2.3.2.2",
+    "wp-sync-db/wp-sync-db": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"
