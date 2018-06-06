@@ -4,9 +4,13 @@
   <body @php(body_class())>
     <div class="wrap" role="document">
       <div class="content">
-        <main class="main">
-          @yield('content')
-        </main>
+         <div id="barba-wrapper">
+            <div class="barba-container">
+              <main class="main">
+                @yield('content')
+              </main>            
+            </div>
+        </div>
         @if (App\display_sidebar())
           <aside class="sidebar">
             @include('partials.sidebar')

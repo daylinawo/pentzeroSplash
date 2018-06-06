@@ -354,3 +354,11 @@ new GW_Rename_Uploaded_Files( array(
     'field_id' => 9,
     'template' => 'Its-Working-{filename}' // most merge tags are supported, original file extension is preserved
 ) );
+
+ add_action( 'wp_ajax_nopriv_get_form', 'get_form' );
+ add_action( 'wp_ajax_get_form', 'get_form' );
+
+ function get_form() {
+    gravity_form( 1,false, false, false, false, true );
+    die();
+}

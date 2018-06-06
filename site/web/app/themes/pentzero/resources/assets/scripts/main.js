@@ -8,10 +8,13 @@ import faFacebookF from "@fortawesome/fontawesome-free-brands/faFacebookF";
 import faTwitter from "@fortawesome/fontawesome-free-brands/faTwitter";
 import faInstagram from "@fortawesome/fontawesome-free-brands/faInstagram";
 import faYoutube from "@fortawesome/fontawesome-free-brands/faYoutube";
-
-fontawesome.library.add(faFacebookF, faTwitter, faInstagram, faYoutube);
+import faAngleLeft from "@fortawesome/fontawesome-free-solid/faAngleLeft";
+import faAngleDown from "@fortawesome/fontawesome-free-solid/faAngleDown";
+import faExclamationTriangle from "@fortawesome/fontawesome-free-solid/faExclamationTriangle";
 
 fontawesome.config = {searchPseudoElements: true}
+
+fontawesome.library.add(faFacebookF, faTwitter, faInstagram, faYoutube, faAngleLeft, faAngleDown, faExclamationTriangle);
 
 // Import everything from autoload
 import "./autoload/**/*"

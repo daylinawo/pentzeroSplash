@@ -7,6 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyGlobsPlugin = require('copy-globs-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 
 const config = require('./config');
 
@@ -112,6 +113,10 @@ let webpackConfig = {
           name: `${config.cacheBusting}.[ext]`,
         },
       },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+      },
     ],
   },
   resolve: {
@@ -119,6 +124,9 @@ let webpackConfig = {
       config.paths.assets,
       'node_modules',
     ],
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    },
     enforceExtension: false,
   },
   resolveLoader: {
@@ -158,6 +166,7 @@ let webpackConfig = {
       debug: config.enabled.watcher,
       stats: { colors: true },
     }),
+    new VueLoaderPlugin(),
     new webpack.LoaderOptionsPlugin({
       test: /\.s?css$/,
       options: {
