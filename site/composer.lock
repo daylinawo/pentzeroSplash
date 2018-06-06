@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "39e3d19ab534dfc530972f304be16da7",
+    "content-hash": "11ed5415e31db3e52e9e10c8e4523ba5",
     "packages": [
         {
             "name": "composer/installers",
@@ -128,10 +128,10 @@
         },
         {
             "name": "gravityforms/gravityforms",
-            "version": "2.3.0.4",
+            "version": "2.3.2.2",
             "dist": {
                 "type": "zip",
-                "url": "https://s3.amazonaws.com/gravityforms/releases/gravityforms_2.3.0.4.zip?AWSAccessKeyId=1603BBK66770VCSCJSG2&Expires=1525146970&Signature=ImDuQ4Gk%2B86bHCZMkhNfVUBZgJU%3D",
+                "url": "https://s3.amazonaws.com/gravityforms/releases/gravityforms_2.3.2.2.zip?AWSAccessKeyId=1603BBK66770VCSCJSG2&Expires=1528409659&Signature=MvodP%2Fu2EFHGSpcACGOwZCeKqlc%3D",
                 "reference": null,
                 "shasum": null
             },

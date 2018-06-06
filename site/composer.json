@@ -35,11 +35,11 @@
       "type": "package",
       "package": {
         "name": "gravityforms/gravityforms",
-        "version": "2.3.0.4",
+        "version": "2.3.2.2",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "http://s3.amazonaws.com/gravityforms/releases/gravityforms_2.3.2.2.zip?AWSAccessKeyId=1603BBK66770VCSCJSG2&Expires=1528409659&Signature=MvodP%2Fu2EFHGSpcACGOwZCeKqlc%3D"
+          "url": "https://s3.amazonaws.com/gravityforms/releases/gravityforms_2.3.2.2.zip?AWSAccessKeyId=1603BBK66770VCSCJSG2&Expires=1528409659&Signature=MvodP%2Fu2EFHGSpcACGOwZCeKqlc%3D"
         }
       }
     }
@@ -54,7 +54,7 @@
     "wpackagist-plugin/contact-form-7": "5.0",
     "wpackagist-plugin/mailchimp-for-wp": "4.2.1",
     "wpackagist-plugin/boxzilla": "3.2.2",
-    "gravityforms/gravityforms": "2.3.0.4"
+    "gravityforms/gravityforms": "2.3.2.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"
