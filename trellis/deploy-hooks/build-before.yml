@@ -25,7 +25,7 @@
 
  - name: Copy production assets
    synchronize:
-     src: "{{ project_local_path }}/web/app/themes/sage/dist"
+     src: "{{ project_local_path }}/web/app/themes/pentzero/dist"
      dest: "{{ deploy_helper.new_release_path }}/web/app/themes/pentzero"
      group: no
      owner: no
