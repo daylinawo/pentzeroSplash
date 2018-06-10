@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+@include('partials.page-header')
 <div class="top-half">
   <div class="container">
     <div class="row">
       <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
         <div class="content-wrap content-wrap--top">
-          @include('partials.page-header')
-          <p class="coming-soon-text">Coming soon</p>
+          <h4 class="coming-soon-text">Coming soon</h4>
+          <hr class="c-divider">
           <div class="signup-wrapper">
             <? echo do_shortcode('[mc4wp_form id="11"]'); ?>
           </div>
@@ -19,7 +20,7 @@
 
 <div class="bottom-half">
   <div class="container h-100">
-    <div class="row h-100">
+    <div class="d-flex h-100 align-items-center">
       <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
         <div class="content-wrap content-wrap--bottom">
 
@@ -55,7 +56,7 @@
 
           <div class="follow-us-section">
             <ul class="follow-group">
-              <li><p class="follow-group--title">Follow us</p></li>
+              <li><h3 class="follow-group--title">Follow us</h3></li>
               <li><a href="#" class="follow-btn follow-btn--fb"><i class="fab fa-facebook-f"></i></a></li>
               <li><a href="#" class="follow-btn follow-btn--yt"><i class="fab fa-youtube"></i></a></li>
               <li><a href="#" class="follow-btn follow-btn--tw"><i class="fab fa-twitter"></i></a></li>

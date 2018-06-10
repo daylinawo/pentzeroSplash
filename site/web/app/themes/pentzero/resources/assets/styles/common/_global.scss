@@ -172,12 +172,6 @@ table {
   border-spacing: 0;
 }
 
-input[type="submit"] {
-  border: 0;
-  box-shadow: none;
-  border-radius: 0;
-}
-
 // Headings, Links & Paragraphs
 
 h1,
@@ -186,6 +180,8 @@ h3,
 h4,
 h5 {
   font-family: $secondary-fontstack;
+  font-weight: 300;
+  color: #a7a7a7;
 }
 
 h1 {
@@ -297,7 +293,6 @@ input[type=submit] {
   background: none;
   letter-spacing: 0.02rem;
   color: $primary-color;
-  font-weight: bold;
   text-transform: uppercase;
   transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
@@ -320,12 +315,16 @@ label {
 
 // Header
 
-.logo-container {
+.page-header {
+  padding-top: 60px;
+}
+
+.logo-c {
   position: relative;
   width: 100%;
 }
 
-.logo-container,
+.logo-c,
 .logo-link {
   height: calc(#{$logo-size-sm-width} / 2);
 
@@ -352,51 +351,71 @@ label {
 
 // Main Content
 
+.c-divider {
+  width: 30px;
+  margin-top: 4rem;
+  border-top: 1px solid #888;
+}
+
 .top-half {
-  min-height: 55vh;
+  min-height: calc(64vh - 150px);
+
+  @include media-breakpoint-up(sm) {
+    min-height: calc(64vh - 179px);
+  }
 }
 
 .bottom-half {
-  min-height: 45vh;
+  min-height: 36vh;
   width: 100%;
   background: #000;
 }
 
 .content-wrap {
-  padding: 0 30px;
   margin: 60px 0 30px;
 }
 
+.content-wrap--top {
+  margin-top: 80px;
+}
+
 .content-wrap--bottom {
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .coming-soon-text {
   font-size: 18px;
   font-size: 1.125em;
-  letter-spacing: 0.2rem;
+  font-weight: 300;
   text-align: center;
-  margin-top: 4rem;
   text-transform: uppercase;
-  font-family: $secondary-fontstack;
 }
 
 // Sign Up Section
 
 .signup-wrapper {
-  margin-top: 4rem;
+  margin-top: 3rem;
 
   @include media-breakpoint-up(sm) {
-    margin-top: 6rem;
+    margin-top: 3rem;
   }
 }
 
 .signup-title {
-  font-size: 30px;
-  font-size: 1.875em;
-  color: $primary-color;
-  text-transform: uppercase;
+  font-size: 68px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
   text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  margin-top: 0;
+  color: $primary-color;
+  font-weight: 400;
+}
+
+.signup-text {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #a7a7a7;
 }
 
 .signup-input-email {
@@ -406,6 +425,7 @@ label {
 
   @include media-breakpoint-up(sm) {
     width: 75%;
+    margin-bottom: 0;
   }
 }
 
@@ -420,26 +440,8 @@ label {
 
 // Sections with Nav
 
-.section-title {
-  @extend h2;
-
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-}
-
-.about-section,
-.contact-section {
-  text-align: center;
-  margin-top: 32px;
-  margin-top: 2rem;
-}
-
 .section-nav {
   text-align: center;
-  border-bottom: 1px solid #444;
-  padding-bottom: 20px;
 
   li {
     &:not(:last-child) {
@@ -450,35 +452,54 @@ label {
       text-transform: uppercase;
       font-size: 13px;
       padding: 11px;
-      letter-spacing: 0.15rem;
-      font-weight: 700;
+      font-weight: 400;
       display: inline-block;
       background: #000;
-      border-radius: 6px;
+      border: 1px solid $primary-color;
+      color: $primary-color;
 
       &:hover {
         text-decoration: none;
-        background: #fff;
-        color: #000;
+        background: $primary-color;
+        color: #fff;
       }
     }
   }
 
   .active {
-    color: #000;
-    background: #fff;
+    color: #fff;
+    background: $primary-color;
   }
 }
 
-.about-section-text {
-  font-size: 14px;
+.section-title {
+  font-size: 1.5rem;
+  color: #a7a7a7;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.about-section,
+.contact-section {
+  text-align: center;
+  margin-top: 32px;
+  margin-top: 2rem;
+}
+
+// About Section
+
+.about-section {
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+
+  .about-section-text {
+    font-size: 13px;
+  }
 }
 
 // Contact Section 
 
 .contact-section {
-  margin-bottom: 50px;
-
   .contact-list {
     li {
       margin: 14px 0;
@@ -486,16 +507,13 @@ label {
 
     a {
       text-transform: uppercase;
-      padding: 1.4rem;
+      line-height: 55px;
       font-size: 12px;
       display: block;
-      font-weight: bold;
       background: #333;
       letter-spacing: 0.1rem;
       cursor: pointer;
       text-align: center;
-      margin: auto;
-      width: 70%;
 
       &:hover {
         text-decoration: none;
@@ -509,42 +527,35 @@ label {
 // Follow Section
 
 .follow-us-section {
-  margin-top: 60px;
+  margin-top: 30px;
   text-align: center;
-}
 
-.follow-group {
-  .follow-group--title {
-    font-size: 14px;
-    font-weight: bold;
-    font-family: $primary-fontstack;
-    color: $primary-color;
-    text-transform: uppercase;
-    margin: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin-right: 10px;
-
-    a {
-      svg {
-        height: 100%;
-      }
-
-      &:hover {
-        color: $primary-color;
-      }
+  .follow-group {
+    .follow-group--title {
+      font-size: 14px;
+      text-transform: uppercase;
+      margin: 0;
     }
 
-    &:last-child {
-      margin-right: 0;
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      a {
+        svg {
+          height: 100%;
+        }
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
-}
-
-.boxzilla-close-icon {
-  color: #fff;
 }
 
 /*
