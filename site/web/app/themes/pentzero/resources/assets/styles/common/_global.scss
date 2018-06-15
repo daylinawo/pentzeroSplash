@@ -128,7 +128,7 @@ section {
 // Default Styling
 
 body {
-  height: 100%;
+  min-height: 100%;
   background: url(../images/bg.jpg) no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -252,9 +252,9 @@ textarea,
 select {
   font-size: 15px;
   letter-spacing: 0.01rem;
-  background-color: #222;
-  border: 1px solid #222;
-  color: #bbb;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #444;
+  color: #fff;
   line-height: 24px;
 
   &::-webkit-input-placeholder {
@@ -284,6 +284,10 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+
+  option {
+    color: black;
+  }
 }
 
 input[type=submit] {
@@ -317,6 +321,7 @@ label {
 
 .page-header {
   padding-top: 60px;
+  margin-bottom: 60px;
 }
 
 .logo-c {
@@ -358,15 +363,15 @@ label {
 }
 
 .top-half {
-  min-height: calc(64vh - 150px);
+  min-height: calc(60vh - 150px);
 
   @include media-breakpoint-up(sm) {
-    min-height: calc(64vh - 179px);
+    min-height: calc(60vh - 239px);
   }
 }
 
 .bottom-half {
-  min-height: 36vh;
+  min-height: 40vh;
   width: 100%;
   background: #000;
 }
@@ -376,7 +381,7 @@ label {
 }
 
 .content-wrap--top {
-  margin-top: 80px;
+  margin-top: 0;
 }
 
 .content-wrap--bottom {
@@ -393,6 +398,10 @@ label {
 
 // Sign Up Section
 
+.fsignup-home {
+  text-align: center;
+}
+
 .signup-wrapper {
   margin-top: 3rem;
 
@@ -402,9 +411,9 @@ label {
 }
 
 .signup-title {
-  font-size: 68px;
+  font-size: 48px;
+  font-size: 3rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
-  text-align: center;
   text-transform: uppercase;
   margin-bottom: 16px;
   margin-top: 0;
@@ -413,7 +422,6 @@ label {
 }
 
 .signup-text {
-  text-align: center;
   margin-bottom: 20px;
   color: #a7a7a7;
 }
@@ -527,7 +535,7 @@ label {
 // Follow Section
 
 .follow-us-section {
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: center;
 
   .follow-group {
@@ -559,12 +567,18 @@ label {
 }
 
 /*
-* 	SUBMISSIONS PAGE
+* 	FORM PAGES
 */
 
 .pform {
   margin-top: 20px;
   background: #000;
+
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1340px;
+    }
+  }
 
   .back-link {
     color: #888;
@@ -582,28 +596,106 @@ label {
   }
 }
 
-.pform-wrap {
-  margin: 60px 0;
-}
-
-.pform-header {
+.pform-form-c,
+.pform-side-c {
   margin-bottom: 60px;
 }
 
-.pform-title {
-  font-size: 30px;
-  font-size: 1.875rem;
-  color: $primary-color;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin-bottom: 20px;
-  letter-spacing: 0.1rem;
-  text-align: left;
+.pform-form--header {
+  padding: 60px 0 0;
+  margin-bottom: 60px;
 }
 
-.pform-text {
-  color: #ccc;
-  font-size: 13px;
+.pform-form--title, {
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-align: left;
+  text-transform: uppercase;
+  color: $primary-color;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.pform-form--text {
+  color: #a7a7a7;
+}
+
+.pform-side--title {
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  margin-top: 0;
+  color: #a7a7a7;
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+}
+
+.pform-side--linkto {
+  padding: 20px;
+  border: 1px solid #333;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.41);
+  display: table;
+}
+
+.linkto {
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 210px;
+  line-height: 60px;
+  display: inline-block;
+  background: $primary-color;
+  letter-spacing: 0.08rem;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    background: $secondary-color;
+    color: #fff;
+  }
+}
+
+.linkto-text {
+  @include media-breakpoint-up(md) {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10px;
+  }
+
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 1.25rem;
+  letter-spacing: 0.06rem;
+  color: #a7a7a7;
+}
+
+.fsignup-side {
+  text-align: left;
+
+  .signup-wrapper {
+    margin-top: 2rem;
+    padding: 20px;
+    border: 1px solid #333;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.41);
+  }
+
+  .signup-title {
+    font-size: 24px;
+    text-shadow: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  .signup-text {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+  }
+
+  input[type=submit] {
+    font-size: 13px;
+  }
 }
 
 .gform_wrapper {

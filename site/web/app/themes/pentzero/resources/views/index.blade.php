@@ -9,8 +9,10 @@
         <div class="content-wrap content-wrap--top">
           <h4 class="coming-soon-text">Coming soon</h4>
           <hr class="c-divider">
-          <div class="signup-wrapper">
-            <? echo do_shortcode('[mc4wp_form id="11"]'); ?>
+          <div class="fsignup-home">
+            <div class="signup-wrapper">
+              <? echo do_shortcode('[mc4wp_form id="11"]'); ?>
+            </div>
           </div>
         </div>
       </div>
