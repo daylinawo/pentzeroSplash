@@ -29,7 +29,7 @@
 					<div class="pform-side-c">
 						<h3 class="pform-side--title">More</h3>
 						<div class="pform-side--linkto">
-							<a href="/contact/" class="linkto">Contact Us</a>
+							<a href="/contact/" class="linkto-btn">Contact Us</a>
 							<div class="linkto-text">Please feel free to get in touch with us</div>
 						</div>
 				        <div class="fsignup-side">

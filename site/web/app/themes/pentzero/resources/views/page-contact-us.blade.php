@@ -29,7 +29,7 @@
 					<div class="pform-side-c">
 						<h3 class="pform-side--title">More</h3>
 						<div class="pform-side--linkto">
-							<a href="/submissions/" class="linkto">Send in your content</a>
+							<a href="/submissions/" class="linkto-btn">Send in your content</a>
 							<div class="linkto-text">Have any exclusive content you want to share with us?</div>
 						</div>
 				        <div class="fsignup-side">

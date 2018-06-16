@@ -253,7 +253,7 @@ select {
   font-size: 15px;
   letter-spacing: 0.01rem;
   background: rgba(0, 0, 0, 0);
-  border: 1px solid #444;
+  border: 1px solid #555;
   color: #fff;
   line-height: 24px;
 
@@ -363,15 +363,15 @@ label {
 }
 
 .top-half {
-  min-height: calc(60vh - 150px);
+  min-height: calc(58vh - 150px);
 
   @include media-breakpoint-up(sm) {
-    min-height: calc(60vh - 239px);
+    min-height: calc(58vh - 239px);
   }
 }
 
 .bottom-half {
-  min-height: 40vh;
+  min-height: 42vh;
   width: 100%;
   background: #000;
 }
@@ -609,6 +609,7 @@ label {
 .pform-form--title, {
   font-size: 30px;
   font-size: 1.875rem;
+  font-weight: 500;
   text-align: left;
   text-transform: uppercase;
   color: $primary-color;
@@ -621,32 +622,38 @@ label {
 }
 
 .pform-side--title {
+  color: #a7a7a7;
   font-size: 30px;
   font-size: 1.875rem;
+  font-weight: 500;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
   margin-top: 0;
-  color: #a7a7a7;
-  border-bottom: 1px solid #444;
   padding-bottom: 20px;
 }
 
 .pform-side--linkto {
+  width: 100%;
   padding: 20px;
-  border: 1px solid #333;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.41);
+  border: 1px solid #444;
   display: table;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+  }
 }
 
-.linkto {
+.linkto-btn {
   font-size: 11px;
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  width: 210px;
   line-height: 60px;
+  letter-spacing: 0.08rem;
+  width: 210px;
   display: inline-block;
   background: $primary-color;
-  letter-spacing: 0.08rem;
   cursor: pointer;
 
   &:hover {
@@ -663,11 +670,13 @@ label {
     padding: 0 10px;
   }
 
+  color: #a7a7a7;
   font-size: 12px;
   text-transform: uppercase;
+  line-height: 20px;
   line-height: 1.25rem;
   letter-spacing: 0.06rem;
-  color: #a7a7a7;
+  margin-top: 10px;
 }
 
 .fsignup-side {
@@ -676,15 +685,14 @@ label {
   .signup-wrapper {
     margin-top: 2rem;
     padding: 20px;
-    border: 1px solid #333;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.41);
+    border: 1px solid #444;
   }
 
   .signup-title {
     font-size: 24px;
     text-shadow: 0;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 500;
   }
 
   .signup-text {
@@ -737,10 +745,15 @@ label {
     background: #dba758;
     border: 0;
     color: #fff;
+    height: 50px;
+    padding: 0;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
 
     @include media-breakpoint-up(md) {
       width: 140px;
-      height: 60px;
     }
   }
 
