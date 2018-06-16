@@ -40,7 +40,7 @@
             <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="pills-about-tab">
               <div class="about-section">
               <h3 class="section-title section-title--about">About</h3>
-                <p class="about-section-text">Founded in 2012 with its Headquarters based in London, England. Pentzero.com is a media company mainly showcasing the affluent lifestyle of celebrity figures, high networth individuals and socialites. Bringing forth coverage in News, Luxury, Entertainment and Fashion.</p>
+                <p class="about-section-text">Pentzero.com is a media company mainly showcasing the affluent lifestyle of celebrity figures, high networth individuals and socialites. Bringing forth coverage in News, Luxury, Entertainment and Fashion.</p>
             </div>
             </div>
 
