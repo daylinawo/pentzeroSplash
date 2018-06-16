@@ -1,14 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-@include('partials.page-header')
+
+<header class="page-header page-header-home">
+  @include('partials.page-header')
+  <h4 class="coming-soon-text">Coming soon</h4>
+</header>
+
 <div class="top-half">
   <div class="container">
     <div class="row">
       <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
         <div class="content-wrap content-wrap--top">
-          <h4 class="coming-soon-text">Coming soon</h4>
-          <hr class="c-divider">
           <div class="fsignup-home">
             <div class="signup-wrapper">
               <? echo do_shortcode('[mc4wp_form id="11"]'); ?>

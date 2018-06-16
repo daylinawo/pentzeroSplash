@@ -2,7 +2,9 @@
 
 
 @section('content')
-@include('partials.page-header')
+<div class="page-header page-header-fpage">
+  @include('partials.page-header')
+</div>
 
 <div class="pform pform--contact">
 	<div class="container">
