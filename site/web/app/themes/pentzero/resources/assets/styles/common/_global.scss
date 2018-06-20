@@ -12,7 +12,7 @@ $primary-fontstack: 'Montserrat', sans-serif;
 $secondary-fontstack: 'Oswald', sans-serif;
 $fa-fontstack: 'Font Awesome 5 Solid', sans-serif;
 
-$logo-size-width: 238px;
+$logo-size-width: 180px;
 $logo-size-sm-width: 180px;
 
 html {
@@ -129,11 +129,7 @@ section {
 
 body {
   min-height: 100%;
-  background: url(../images/bg.jpg) no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: #000;
   font-family: $primary-fontstack;
   line-height: 1;
   color: #fff;
@@ -178,9 +174,10 @@ h1,
 h2,
 h3,
 h4,
-h5 {
-  font-family: $secondary-fontstack;
-  font-weight: 400;
+h5,
+h6 {
+  font-family: $primary-fontstack;
+  font-weight: 700;
   color: #fff;
 }
 
@@ -254,7 +251,6 @@ select {
   letter-spacing: 0.01rem;
   background: rgba(0, 0, 0, 0);
   border: 1px solid #555;
-  color: #fff;
   line-height: 24px;
 
   &::-webkit-input-placeholder {
@@ -321,15 +317,14 @@ label {
 
 .page-header {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .page-header-home {
-  padding-bottom: 60px;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.page-header-fpage {
-  margin-bottom: 60px;
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .logo-c {
@@ -348,10 +343,10 @@ label {
 
 .logo,
 .logo-link {
+  width: $logo-size-sm-width;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: $logo-size-sm-width;
 
   @include media-breakpoint-up(sm) {
     width: $logo-size-width;
@@ -362,58 +357,72 @@ label {
   z-index: 1;
 }
 
-// Main Content
-
-.top-half {
-  min-height: calc(58vh - 150px);
-
-  @include media-breakpoint-up(sm) {
-    min-height: calc(58vh - 297px);
-  }
-}
-
-.bottom-half {
-  min-height: 42vh;
-  width: 100%;
-  background: #000;
-}
-
-.content-wrap {
-  margin: 60px 0 30px;
-}
-
-.content-wrap--top {
-  margin-top: 0;
-}
-
-.content-wrap--bottom {
-  margin-bottom: 0;
-}
-
 .coming-soon-text {
-  font-size: 18px;
-  font-size: 1.125em;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 40px;
   letter-spacing: 0.2rem;
+  color: $primary-color;
+  margin-top: 40px;
 }
 
-// Sign Up Section
+// Main Content
 
-.fsignup-home {
-  text-align: center;
-  margin-top: 40px;
+.module-media-container {
+  padding-top: 264px;
+}
 
-  @include media-breakpoint-up(sm) {
-    margin-top: 60px;
+.module-media-wrapper {
+  height: 40vh;
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+
+  @include media-breakpoint-up(md) {
+    background-attachment: fixed;
   }
 }
 
+.component-gradient-bottom {
+  position: absolute;
+  opacity: 1;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  bottom: -10px;
+  z-index: -1;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+// Sign Up
+
+.fsignup {
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    width: 600px;
+    margin: auto;
+  }
+}
+
+.fsignup--home {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .signup-title {
-  font-size: 48px;
-  font-size: 3rem;
+  font-size: 30px;
+  font-size: 1.875rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -423,128 +432,169 @@ label {
 
 .signup-text {
   color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.06rem;
   margin-bottom: 20px;
 }
 
 .signup-input-email {
-  background-color: #fff !important;
+  font-size: 13px !important;
+  color: #222;
   margin-bottom: 10px;
+  background-color: #fff !important;
   border: 0 !important;
+  height: 65px;
 
-  @include media-breakpoint-up(sm) {
-    width: 75%;
+  @include media-breakpoint-up(md) {
     margin-bottom: 0;
+    width: 75%;
   }
 }
 
 .signup-input-submit {
-  height: 80px;
+  height: 65px;
+  font-size: 13px !important;
+  font-weight: bold;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     width: calc(25% - 10px);
     margin-left: 5px;
   }
 }
 
-// Sections with Nav
+// Page footer
 
-.section-nav {
-  text-align: center;
+.page-footer {
+  margin-top: 80px;
+  margin-bottom: 60px;
 
-  li {
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
-
-    a {
-      text-transform: uppercase;
-      font-size: 13px;
-      padding: 11px;
-      font-weight: 400;
-      display: inline-block;
-      background: #000;
-      border: 1px solid $primary-color;
-      color: $primary-color;
-
-      &:hover {
-        text-decoration: none;
-        background: $primary-color;
-        color: #fff;
-      }
-    }
-  }
-
-  .active {
-    color: #fff;
-    background: $primary-color;
+  @include media-breakpoint-up(lg) {
+    margin-top: 100px;
   }
 }
 
-.about-section,
-.contact-section {
-  text-align: center;
-  margin-top: 32px;
-  margin-top: 2rem;
+.page-footer-content-wrap {
+  padding: 0 20px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0 60px;
+    max-width: 1440px;
+    margin: auto;
+  }
 }
 
-.section-title {
-  font-size: 1.5rem;
-  margin: 0 0 1rem;
+.link-box,
+.no-link-box {
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 60px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+    border: 1px solid #333;
+  }
+}
+
+.no-link-box {
+  display: table;
+
+  @include media-breakpoint-up(lg) {
+    height: 100%;
+  }
+}
+
+.no-link-box-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.no-link-box-title {
+  font-size: 34px;
+  font-size: 2.125rem;
+  margin: 0;
+  margin-bottom: 30px;
   text-transform: uppercase;
 }
 
-.section-title--contact {
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
+.no-link-box-foreword {
+  font-family: $secondary-fontstack;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 10px 0;
+  margin: 30px auto;
+  width: 150px;
+  color: $primary-color;
+  text-transform: uppercase;
+  border-top: 1px solid #dba758;
+  border-bottom: 1px solid #ffc107;
+  letter-spacing: 3px;
+  line-height: 24px;
 }
 
-// About Section
+.no-link-box-text {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 22px;
+  margin: 0;
+}
 
-.about-section {
-  border-bottom: 1px solid #444;
-  padding-bottom: 20px;
+.link-box-title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
 
-  .about-section-text {
-    font-size: 13px;
+.link-box-text {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.06rem;
+  margin-bottom: 40px;
+}
+
+.link-box-btn {
+  color: #dba758;
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.06rem;
+  border: 1px solid #dba758;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+  margin: auto;
+
+  @include media-breakpoint-up(md) {
+    width: 250px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: $primary-color;
+    color: #fff;
   }
 }
 
-// Contact Section 
-
-.contact-section {
-  .contact-list {
-    li {
-      margin: 14px 0;
-    }
-
-    a {
-      text-transform: uppercase;
-      line-height: 55px;
-      font-size: 12px;
-      display: block;
-      background: #333;
-      letter-spacing: 0.1rem;
-      cursor: pointer;
-      text-align: center;
-
-      &:hover {
-        text-decoration: none;
-        background-color: $primary-color;
-        color: #fff;
-      }
-    }
-  }
+.opacity-hover {
+  display: block;
 }
 
 // Follow Section
 
 .follow-us-section {
-  margin-top: 50px;
+  margin-top: 120px;
+  margin-bottom: 100px;
+  padding-top: 60px;
   text-align: center;
+  border-top: 1px solid #333;
 
   .follow-group {
     .follow-group--title {
-      font-size: 14px;
+      font-size: 18px;
       text-transform: uppercase;
       margin: 0;
     }
@@ -555,6 +605,7 @@ label {
 
       a {
         svg {
+          font-size: 18px;
           height: 100%;
         }
 

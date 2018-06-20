@@ -1,6 +1,8 @@
 // import external dependencies
 import 'jquery';
 
+
+import 'bootstrap/dist/js/bootstrap';
 // base package
 import fontawesome from "@fortawesome/fontawesome";
 // Facebook and Twitter icons

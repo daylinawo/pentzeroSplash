@@ -2,7 +2,8 @@ import Barba from 'barba.js/dist/barba.min';
 
 export default {
   init() {
-    // JavaScript to be fired on all pages
+
+  // JavaScript to be fired on all pages
 	var transEffect = Barba.BaseTransition.extend({
 		start: function(){
 			//eslint-disable-next-line no-unused-vars
