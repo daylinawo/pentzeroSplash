@@ -20,8 +20,17 @@
 
 <div class="page-footer">
   <div class="page-footer-content-wrap">
-    <div class="container-fluid h-100">
-      <div class="row h-100">
+    <div class="container">
+      <div class="row">
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="link-box link-box--contact-us">
+              <a href="/contact-us/" class="opacity-hover"><div class="global-image-wrapper"><img src="@asset('images/diddy-phone-1280x960.png')" class="img-fluid"/></div></a>
+              <h4 class="link-box-title link-box-title--contact-us">Contact Us</h4>
+              <div class="link-box-text">Send us a message</div>
+              <a href="/contact-us/" class="link-box-btn">Contact Us</a>
+            </div>
+          </div>
 
           <div class="col-12 col-lg-4">
             <div class="no-link-box no-link-box--about">
@@ -34,17 +43,8 @@
           </div>
 
           <div class="col-12 col-md-6 col-lg-4">
-            <div class="link-box link-box--contact-us">
-              <a href="/contact-us/" class="opacity-hover"><div class="global-image-wrapper"><img src="@asset('images/contact-us-thumbl.png')" class="img-fluid"/></div></a>
-              <h4 class="link-box-title link-box-title--contact-us">Contact Us</h4>
-              <div class="link-box-text">Send us a message</div>
-              <a href="/contact-us/" class="link-box-btn">Contact Us</a>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-4">
             <div class="link-box link-box--submissions">
-              <a href="/submissions/" class="opacity-hover"><div class="global-image-wrapper"><img src="@asset('images/submissions-thumb.png')" class="img-fluid"/></div></a>
+              <a href="/submissions/" class="opacity-hover"><div class="global-image-wrapper"><img src="@asset('images/lohan-1280x960.png')" class="img-fluid"/></div></a>
               <h4 class="link-box-title link-box-title--submissions">Send in your content</h4>
               <div class="link-box-text">Share exclusive content with us</div>
               <a href="/submissions/" class="link-box-btn">Send in your content</a>
@@ -54,8 +54,8 @@
     </div>
 
     <div class="follow-us-section">
+      <p class="follow-group--title">Follow us</p>
       <ul class="follow-group">
-        <li><h3 class="follow-group--title">Follow us</h3></li>
         <li><a href="#" class="follow-btn follow-btn--fb"><i class="fab fa-facebook-f"></i></a></li>
         <li><a href="#" class="follow-btn follow-btn--yt"><i class="fab fa-youtube"></i></a></li>
         <li><a href="#" class="follow-btn follow-btn--tw"><i class="fab fa-twitter"></i></a></li>

@@ -176,8 +176,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $primary-fontstack;
-  font-weight: 700;
+  font-family: $secondary-fontstack;
+  font-weight: 500;
   color: #fff;
 }
 
@@ -358,8 +358,9 @@ label {
 }
 
 .coming-soon-text {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -368,6 +369,12 @@ label {
 }
 
 // Main Content
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1340px;
+  }
+}
 
 .module-media-container {
   padding-top: 264px;
@@ -421,8 +428,8 @@ label {
 }
 
 .signup-title {
-  font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 36px;
+  font-size: 2.25rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -475,6 +482,7 @@ label {
 
 .page-footer-content-wrap {
   padding: 0 20px;
+  position: relative;
 
   @include media-breakpoint-up(lg) {
     padding: 0 60px;
@@ -486,7 +494,6 @@ label {
 .link-box,
 .no-link-box {
   text-align: center;
-  padding: 30px;
   margin-bottom: 60px;
 
   @include media-breakpoint-up(lg) {
@@ -495,12 +502,13 @@ label {
   }
 }
 
+.link-box {
+  padding: 30px;
+}
+
 .no-link-box {
   display: table;
-
-  @include media-breakpoint-up(lg) {
-    height: 100%;
-  }
+  padding: 40px 30px;
 }
 
 .no-link-box-center {
@@ -509,42 +517,43 @@ label {
 }
 
 .no-link-box-title {
-  font-size: 34px;
-  font-size: 2.125rem;
+  font-size: 36px;
+  font-size: 2.25rem;
   margin: 0;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
 
 .no-link-box-foreword {
-  font-family: $secondary-fontstack;
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 300;
-  padding: 10px 0;
+  padding: 6px 0;
   margin: 30px auto;
   width: 150px;
-  color: $primary-color;
+  color: #aaa;
   text-transform: uppercase;
-  border-top: 1px solid #dba758;
-  border-bottom: 1px solid #ffc107;
-  letter-spacing: 3px;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  letter-spacing: 2px;
   line-height: 24px;
 }
 
 .no-link-box-text {
+  color: #aaa;
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 22px;
+  padding: 0 20px;
   margin: 0;
 }
 
 .link-box-title {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 26px;
+  font-size: 1.625rem;
   margin: 0;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   text-transform: uppercase;
 }
 
@@ -586,26 +595,41 @@ label {
 // Follow Section
 
 .follow-us-section {
-  margin-top: 120px;
-  margin-bottom: 100px;
-  padding-top: 60px;
+  margin: 60px auto;
   text-align: center;
-  border-top: 1px solid #333;
+
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #333;
+    width: 409px;
+  }
+
+  .follow-group--title {
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: $secondary-fontstack;
+    color: #aaa;
+  }
 
   .follow-group {
-    .follow-group--title {
-      font-size: 18px;
-      text-transform: uppercase;
-      margin: 0;
-    }
+    color: #aaa;
 
     li {
       display: inline-block;
-      margin-right: 10px;
+      margin-right: 20px;
 
       a {
         svg {
-          font-size: 18px;
+          font-size: 24px;
           height: 100%;
         }
 
@@ -628,12 +652,6 @@ label {
 .pform {
   margin-top: 20px;
   background: #000;
-
-  @media (min-width: 1400px) {
-    .container {
-      max-width: 1340px;
-    }
-  }
 
   .back-link {
     color: #888;
