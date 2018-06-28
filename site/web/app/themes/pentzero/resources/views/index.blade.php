@@ -9,9 +9,18 @@
 
 <div class="module-media-container">
   <div class="module-media-wrapper">
-    <div class="fsignup fsignup--home">
-      <div class="fsignup-signup-wrapper fsignup-signup-wrapper--home">
+    <div class="module-media-content-wrap">
+      <div class="signup signup--home">
         <? echo do_shortcode('[mc4wp_form id="11"]'); ?>
+      </div>
+      <div class="follow-us-section">
+        <h4 class="follow-group--title">Follow us on</h4>
+        <ul class="follow-group">
+          <li><a href="#" class="follow-btn follow-btn--fb"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#" class="follow-btn follow-btn--yt"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="#" class="follow-btn follow-btn--tw"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" class="follow-btn follow-btn--ig"><i class="fab fa-instagram"></i></a></li>
+        </ul>
       </div>
     </div>
     <div class="component-gradient-bottom"></div>
@@ -51,16 +60,6 @@
             </div>
           </div>
       </div>
-    </div>
-
-    <div class="follow-us-section">
-      <p class="follow-group--title">Follow us</p>
-      <ul class="follow-group">
-        <li><a href="#" class="follow-btn follow-btn--fb"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#" class="follow-btn follow-btn--yt"><i class="fab fa-youtube"></i></a></li>
-        <li><a href="#" class="follow-btn follow-btn--tw"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#" class="follow-btn follow-btn--ig"><i class="fab fa-instagram"></i></a></li>
-      </ul>
     </div>
 
   </div>

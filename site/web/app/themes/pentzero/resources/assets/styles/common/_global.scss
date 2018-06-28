@@ -177,8 +177,8 @@ h4,
 h5,
 h6 {
   font-family: $secondary-fontstack;
-  font-weight: 500;
-  color: #fff;
+  font-weight: 400;
+  color: #aaa;
 }
 
 h1 {
@@ -234,6 +234,8 @@ a {
 input,
 textarea,
 select {
+  font-size: 13px;
+  font-size: 0.8125rem;
   padding: 20px;
   width: 100%;
 }
@@ -247,10 +249,7 @@ input[type=text],
 input[type=email],
 textarea,
 select {
-  font-size: 15px;
   letter-spacing: 0.01rem;
-  background: rgba(0, 0, 0, 0);
-  border: 1px solid #555;
   line-height: 24px;
 
   &::-webkit-input-placeholder {
@@ -276,6 +275,13 @@ select {
   }
 }
 
+input[type=submit] {
+  letter-spacing: 0.02rem;
+  transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -284,33 +290,6 @@ select {
   option {
     color: black;
   }
-}
-
-input[type=submit] {
-  font-size: 16px;
-  font-size: 1rem;
-  border: 2px solid $primary-color;
-  background: none;
-  letter-spacing: 0.02rem;
-  color: $primary-color;
-  text-transform: uppercase;
-  transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-
-  &:hover {
-    background-color: $primary-color;
-    color: #fff;
-  }
-}
-
-label {
-  text-transform: uppercase;
-  font-size: 12px;
-  margin-bottom: 1.5rem;
-  color: #000;
-  font-weight: 600;
-  letter-spacing: 0.05em;
 }
 
 // Header
@@ -358,9 +337,10 @@ label {
 }
 
 .coming-soon-text {
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-family: $primary-fontstack;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -381,10 +361,10 @@ label {
 }
 
 .module-media-wrapper {
-  height: 40vh;
+  height: 50vh;
   background-image: url(../images/bg.jpg);
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -395,6 +375,14 @@ label {
   @include media-breakpoint-up(md) {
     background-attachment: fixed;
   }
+}
+
+.module-media-content-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
 }
 
 .component-gradient-bottom {
@@ -411,46 +399,37 @@ label {
 
 // Sign Up
 
-.fsignup {
+.signup {
   text-align: center;
+}
 
-  @include media-breakpoint-up(md) {
-    width: 600px;
-    margin: auto;
+.signup--home {
+  padding: 30px;
+  background: #111;
+
+  .signup-title {
+    font-size: 32px;
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin: 0 auto 16px;
   }
 }
 
-.fsignup--home {
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.signup-title {
-  font-size: 36px;
-  font-size: 2.25rem;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
-  text-transform: uppercase;
-  margin-bottom: 16px;
-  margin-top: 0;
-  color: $primary-color;
-}
-
 .signup-text {
-  color: #fff;
+  color: #aaa;
   font-size: 13px;
-  letter-spacing: 0.06rem;
   margin-bottom: 20px;
 }
 
-.signup-input-email {
-  font-size: 13px !important;
-  color: #222;
-  margin-bottom: 10px;
-  background-color: #fff !important;
-  border: 0 !important;
+.signup-input {
   height: 65px;
+}
+
+.signup-input-email {
+  color: #fff;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #666;
 
   @include media-breakpoint-up(md) {
     margin-bottom: 0;
@@ -459,13 +438,86 @@ label {
 }
 
 .signup-input-submit {
-  height: 65px;
-  font-size: 13px !important;
   font-weight: bold;
+  color: $primary-color;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid $primary-color;
+  text-transform: uppercase;
 
   @include media-breakpoint-up(md) {
     width: calc(25% - 10px);
     margin-left: 5px;
+  }
+
+  &:hover {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}
+
+// Follow Section
+
+.follow-us-section {
+  padding: 30px 0;
+  background-color: #d8d8d8;
+  text-align: center;
+
+  .follow-group--title {
+    font-size: 26px;
+    font-size: 1.625rem;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #666;
+  }
+
+  .follow-group {
+    color: #aaa;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      a {
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        color: #666;
+
+        svg {
+          font-size: 20px;
+          height: 100%;
+        }
+
+        &:hover {
+          color: #fff;
+        }
+
+        .follow-btn--fb:hover {
+          background-color: #3b5998;
+          border-color: #3b5998;
+        }
+
+        .follow-btn--yt:hover {
+          background-color: #b00;
+          border-color: #b00;
+        }
+
+        .follow-btn--tw:hover {
+          background-color: #00aced;
+          border-color: #00aced;
+        }
+
+        .follow-btn--ig:hover {
+          background-color: #517fa4;
+          border-color: #517fa4;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
 
@@ -521,7 +573,7 @@ label {
   font-size: 2.25rem;
   margin: 0;
   margin-bottom: 30px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .no-link-box-foreword {
@@ -531,10 +583,10 @@ label {
   padding: 6px 0;
   margin: 30px auto;
   width: 150px;
-  color: #aaa;
+  color: $primary-color;
   text-transform: uppercase;
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
+  border-top: 1px solid $primary-color;
+  border-bottom: 1px solid $primary-color;
   letter-spacing: 2px;
   line-height: 24px;
 }
@@ -554,7 +606,7 @@ label {
   margin: 0;
   margin-top: 30px;
   margin-bottom: 30px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .link-box-text {
@@ -590,59 +642,6 @@ label {
 
 .opacity-hover {
   display: block;
-}
-
-// Follow Section
-
-.follow-us-section {
-  margin: 60px auto;
-  text-align: center;
-
-  @include media-breakpoint-up(md) {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    padding: 20px;
-    border: 1px solid #333;
-    width: 409px;
-  }
-
-  .follow-group--title {
-    font-size: 26px;
-    font-size: 1.625rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin: 0;
-    margin-bottom: 20px;
-    font-family: $secondary-fontstack;
-    color: #aaa;
-  }
-
-  .follow-group {
-    color: #aaa;
-
-    li {
-      display: inline-block;
-      margin-right: 20px;
-
-      a {
-        svg {
-          font-size: 24px;
-          height: 100%;
-        }
-
-        &:hover {
-          color: $primary-color;
-        }
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
 }
 
 /*
@@ -770,10 +769,6 @@ label {
     text-transform: uppercase;
     letter-spacing: 0.06rem;
     color: #a7a7a7;
-  }
-
-  input[type=submit] {
-    font-size: 13px;
   }
 }
 
