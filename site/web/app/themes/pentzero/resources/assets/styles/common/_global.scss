@@ -295,15 +295,15 @@ select {
 // Header
 
 .page-header {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .page-header-home {
   background-color: #000;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 30;
 }
 
 .logo-c {
@@ -337,15 +337,15 @@ select {
 }
 
 .coming-soon-text {
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   font-family: $primary-fontstack;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: $primary-color;
-  margin-top: 40px;
+  color: #666;
+  margin: 30px 0 60px;
 }
 
 // Main Content
@@ -357,32 +357,105 @@ select {
 }
 
 .module-media-container {
-  padding-top: 264px;
+  padding-top: 130px;
+  background: #fff;
 }
 
-.module-media-wrapper {
-  height: 50vh;
-  background-image: url(../images/bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.module-media-slideshow {
+  height: 55vh;
   position: relative;
-  z-index: 0;
 
-  @include media-breakpoint-up(md) {
-    background-attachment: fixed;
+  .slideshow__item {
+    height: 55vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: absolute;
+
+    @include media-breakpoint-up(md) {
+      background-attachment: fixed;
+    }
+  }
+
+  .slideshow__item-1 {
+    background-image: url(../images/background_1.jpg);
+  }
+
+  .slideshow__item-2 {
+    background-image: url(../images/background_2.jpg);
+  }
+
+  .slideshow__item-3 {
+    background-image: url(../images/background_3.jpg);
+  }
+
+  .slideshow__item-4 {
+    background-image: url(../images/background_4.jpg);
+  }
+
+  .slideshow__item-5 {
+    background-image: url(../images/background_5.jpg);
+  }
+
+  .slideshow__item-6 {
+    background-image: url(../images/background_6.jpg);
+  }
+
+  .slideshow__item-7 {
+    background-image: url(../images/lohan-1280x960.png);
   }
 }
 
-.module-media-content-wrap {
+.module-media-slideshow div:nth-of-type(1) {
+  animation-name: fader;
+  animation-delay: 4s;
+  animation-duration: 1s;
+  z-index: 20;
+}
+
+.module-media-slideshow div:nth-of-type(2) {
+  z-index: 10;
+}
+
+.module-media-slideshow div:nth-of-type(n+3) {
+  display: none;
+}
+
+@keyframes fader {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.module-media-c-wrapper {
+  height: 55vh;
+  position: absolute;
+  top: 130px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.module-media-card {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 550px;
+}
+
+.module-media-card-body {
+  padding: 30px;
+  background-color: #111;
+}
+
+.module-media-card-footer {
+  padding: 30px;
+  background-color: #d8d8d8;
 }
 
 .component-gradient-bottom {
@@ -399,13 +472,8 @@ select {
 
 // Sign Up
 
-.signup {
-  text-align: center;
-}
-
 .signup--home {
-  padding: 30px;
-  background: #111;
+  text-align: center;
 
   .signup-title {
     font-size: 32px;
@@ -438,28 +506,26 @@ select {
 }
 
 .signup-input-submit {
-  font-weight: bold;
   color: $primary-color;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid $primary-color;
   text-transform: uppercase;
-
-  @include media-breakpoint-up(md) {
-    width: calc(25% - 10px);
-    margin-left: 5px;
-  }
+  font-weight: bold;
 
   &:hover {
     background-color: $primary-color;
     color: #fff;
   }
+
+  @include media-breakpoint-up(md) {
+    width: calc(25% - 10px);
+    margin-left: 5px;
+  }
 }
 
 // Follow Section
 
-.follow-us-section {
-  padding: 30px 0;
-  background-color: #d8d8d8;
+.follow-group-container {
   text-align: center;
 
   .follow-group--title {
@@ -493,22 +559,22 @@ select {
           color: #fff;
         }
 
-        .follow-btn--fb:hover {
+        &.follow-btn--fb:hover {
           background-color: #3b5998;
           border-color: #3b5998;
         }
 
-        .follow-btn--yt:hover {
+        &.follow-btn--yt:hover {
           background-color: #b00;
           border-color: #b00;
         }
 
-        .follow-btn--tw:hover {
+        &.follow-btn--tw:hover {
           background-color: #00aced;
           border-color: #00aced;
         }
 
-        .follow-btn--ig:hover {
+        &.follow-btn--ig:hover {
           background-color: #517fa4;
           border-color: #517fa4;
         }
