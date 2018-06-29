@@ -178,7 +178,7 @@ h5,
 h6 {
   font-family: $secondary-fontstack;
   font-weight: 400;
-  color: #aaa;
+  color: #fff;
 }
 
 h1 {
@@ -337,15 +337,15 @@ select {
 }
 
 .coming-soon-text {
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: bold;
   font-family: $primary-fontstack;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: #666;
-  margin: 30px 0 60px;
+  color: $primary-color;
+  margin: 30px 0 50px;
 }
 
 // Main Content
@@ -446,16 +446,8 @@ select {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 550px;
-}
-
-.module-media-card-body {
+  background: rgba(0, 0, 0, 0.85);
   padding: 30px;
-  background-color: #111;
-}
-
-.module-media-card-footer {
-  padding: 30px;
-  background-color: #d8d8d8;
 }
 
 .component-gradient-bottom {
@@ -473,11 +465,12 @@ select {
 // Sign Up
 
 .signup--home {
+  margin: 0 auto 50px;
   text-align: center;
 
   .signup-title {
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 38px;
+    font-size: 2.375rem;
     text-transform: capitalize;
     margin: 0 auto 16px;
   }
@@ -526,19 +519,18 @@ select {
 // Follow Section
 
 .follow-group-container {
+  margin: 30px auto 50px;
   text-align: center;
 
   .follow-group--title {
-    font-size: 26px;
-    font-size: 1.625rem;
+    font-size: 38px;
+    font-size: 2.375rem;
     margin: 0;
     margin-bottom: 10px;
-    color: #666;
+    text-transform: capitalize;
   }
 
   .follow-group {
-    color: #aaa;
-
     li {
       display: inline-block;
       margin-right: 10px;
@@ -548,7 +540,7 @@ select {
         width: 45px;
         height: 45px;
         border-radius: 50%;
-        color: #666;
+        color: #aaa;
 
         svg {
           font-size: 20px;

@@ -19,22 +19,18 @@
   </div>
   <div class="module-media-c-wrapper">
     <div class="module-media-card">
-      <div class="module-media-card-body">
-        <h4 class="coming-soon-text">Coming soon</h4>
-        <div class="signup signup--home">
-          <? echo do_shortcode('[mc4wp_form id="11"]'); ?>
-        </div>
+      <h4 class="coming-soon-text">Coming soon</h4>
+      <div class="signup signup--home">
+        <? echo do_shortcode('[mc4wp_form id="11"]'); ?>
       </div>
-      <div class="module-media-card-footer">
-        <div class="follow-group-container">
-          <h4 class="follow-group--title">Follow us on</h4>
-          <ul class="follow-group">
-            <li><a href="#" class="follow-btn follow-btn--fb"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#" class="follow-btn follow-btn--yt"><i class="fab fa-youtube"></i></a></li>
-            <li><a href="#" class="follow-btn follow-btn--tw"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#" class="follow-btn follow-btn--ig"><i class="fab fa-instagram"></i></a></li>
-          </ul>
-        </div>
+      <div class="follow-group-container">
+        <h4 class="follow-group--title">Follow us</h4>
+        <ul class="follow-group">
+          <li><a href="#" class="follow-btn follow-btn--fb"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#" class="follow-btn follow-btn--yt"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="#" class="follow-btn follow-btn--tw"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" class="follow-btn follow-btn--ig"><i class="fab fa-instagram"></i></a></li>
+        </ul>
       </div>
     </div>
   </div>
