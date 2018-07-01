@@ -40,56 +40,66 @@
 </div>
 
 <div class="page-footer">
-  <div class="page-footer_content-wrap">
+  <div class="page-footer__content-wrap">
     <div class="container">
       <div class="row">
+
         <div class="col-12 col-lg-4 order-lg-2">
-          <div class="no-link-box no-link-box--about">
+          <div class="no-link-box no-link-box__about">
             <div class="no-link-box-center">
-              <h3 class="no-link-box-title no-link-box-title--about">About</h3>
-                <div class="no-link-box-foreword">What is Pentzero?</div>
-                <p class="no-link-box-text">Pentzero.com is a media company mainly showcasing the affluent lifestyle of celebrity figures, high networth individuals and socialites. Bringing forth coverage in News, Luxury, Entertainment and Fashion.</p>
+              <h3 class="no-link-box__title no-link-box__title--about">About</h3>
+                <div class="no-link-box__subtitle">What is Pentzero?</div>
+                <p class="no-link-box__text">Pentzero.com is a media company mainly showcasing the affluent lifestyle of celebrity figures, high networth individuals and socialites. Bringing forth coverage in News, Luxury, Entertainment and Fashion.</p>
             </div>
           </div>
         </div>
 
         <div class="col-12 col-lg-4 order-lg-1">
-          <div class="link-box link-box--contact-us">
-            <div class="row">
-              <div class="col-6 col-lg-12">
-                <a href="/contact-us/" class="opacity-hover"><div class="global-image-wrapper"><img src="@asset('images/diddy-phone-1280x960.png')" class="img-fluid"/></div></a>
-              </div>
-              <div class="col-6 col-lg-12">
-                <h4 class="link-box-title link-box-title--contact-us">Contact Us</h4>
-                <div class="link-box-text">Send us a message</div>
-                <a href="/contact-us/" class="link-box-btn">Contact Us</a>
-              </div>
+          <div class="link-box link-box__contact-us">
+            <div class="link-box__header">
+              <a href="/contact-us/" class="opacity-hover">
+                <picture>
+                  <source srcset="@asset('images/contact-landscape_md.jpg') 405w, @asset('images/contact-landscape_lg.jpg') 810w" media="(min-width: 768px)">
+                  <source srcset="@asset('images/contact-portrait_xs.jpg') 200w, @asset('images/contact-portrait_sm.jpg') 300w, @asset('images/contact-portrait_md.jpg') 400w" media="(min-width: 0)">
+                  <img src="@asset('images/contact-portrait_xs.jpg')" class="img-fluid"/>
+                </picture>
+              </a>
+            </div>
+            <div class="link-box__body">
+              <h4 class="link-box__title link-box__title--contact-us">Contact Us</h4>
+              <div class="link-box__text">Send us a message</div>
+              <a href="/contact-us/" class="link-box__btn">Contact Us</a>
             </div>
           </div>
         </div>
 
         <div class="col-12 col-lg-4 order-lg-3">
-          <div class="link-box link-box--submissions">
-            <div class="row">
-              <div class="col-6 col-lg-12 order-lg-2">
-                <h4 class="link-box-title link-box-title--submissions">Send in your content</h4>
-                <div class="link-box-text">Share exclusive content with us</div>
-                <a href="/submissions/" class="link-box-btn">Send in your content</a>
-              </div>
-              <div class="col-6 col-lg-12 order-lg-1">
-                <a href="/submissions/" class="opacity-hover"><div class="global-image-wrapper"><img src="@asset('images/lohan-1280x960.png')" class="img-fluid"/></div></a>
-              </div>
+          <div class="link-box link-box__submissions">
+            <div class="link-box__header">
+              <a href="/submissions/" class="opacity-hover">
+                <picture>
+                  <source srcset="@asset('images/submissions-landscape_md.jpg') 405w, @asset('images/submissions-landscape_lg.jpg') 810w" media="(min-width: 768px)">
+                  <source srcset="@asset('images/submissions-portrait_xs.jpg') 200w, @asset('images/submissions-portrait_sm.jpg') 300w, @asset('images/submissions-portrait_md.jpg') 400w" media="(min-width: 0)">
+                  <img src="@asset('images/submissions-portrait_xs.jpg')" class="img-fluid"/>
+                </picture>
+              </a>
+            </div>
+            <div class="link-box__body">
+              <h4 class="link-box__title link-box__title--submissions">Send in your content</h4>
+              <div class="link-box__text">Share exclusive content with us</div>
+              <a href="/submissions/" class="link-box__btn">Send in your content</a>
             </div>
           </div>
         </div>
+
       </div>
 
-      <div class="page-footer_end">
+      <div class="page-footer__end">
         <a href="#" class="t-c_link">Terms & Conditions</a>
         <p class="copyright-text">© Pentzero 2018</p>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>
 @endsection
