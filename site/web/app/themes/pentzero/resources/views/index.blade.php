@@ -2,7 +2,7 @@
 
 @section('content')
 
-<header class="page-header page-header-home">
+<header class="page-header page-header--home">
   @include('partials.page-header')
 </header>
 
@@ -39,8 +39,8 @@
   </div>
 </div>
 
-<div class="page-footer">
-  <div class="page-footer__content-wrap">
+<div class="home-footer">
+  <div class="home-footer__c-wrap">
     <div class="container">
       <div class="row">
 
@@ -94,9 +94,9 @@
 
       </div>
 
-      <div class="page-footer__end">
-        <a href="#" class="t-c_link">Terms & Conditions</a>
-        <p class="copyright-text">© Pentzero 2018</p>
+      <div class="home-footer--end">
+        <a href="#">Terms & Conditions</a>
+        <p>© Pentzero 2018</p>
       </div>
 
     </div>

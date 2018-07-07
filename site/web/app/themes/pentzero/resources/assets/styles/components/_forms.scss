@@ -17,3 +17,215 @@
   @extend .btn;
   @extend .btn-secondary;
 }
+
+/** Inputs */
+
+input,
+textarea,
+select {
+  font-size: 12px;
+  font-size: 0.8125rem;
+  padding: 20px;
+  width: 100%;
+}
+
+input[type=text],
+input[type=email],
+textarea,
+select {
+  letter-spacing: 0.01rem;
+  line-height: 24px;
+
+  &::-webkit-input-placeholder {
+    color: #888;
+  }
+
+  &::-moz-placeholder {
+    color: #888;
+  }
+
+  &:-ms-input-placeholder {
+    color: #888;
+  }
+
+  &:-moz-placeholder {
+    color: #888;
+  }
+
+  &:focus {
+    box-shadow: 0 0 5px #dba758;
+    border: 1px solid #dba758;
+    outline: 0;
+  }
+}
+
+input[type=submit] {
+  letter-spacing: 0.02rem;
+  transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  option {
+    color: black;
+  }
+}
+
+/** GFORM */
+
+.gform_wrapper {
+  .gfield {
+    margin-bottom: 15px;
+  }
+
+  // Gform Submit Button
+  .gform_button {
+    @include media-breakpoint-up(md) {
+      width: 150px;
+      margin-top: 20px;
+    }
+
+    &::after {
+      content: '';
+      clear: both;
+    }
+  }
+
+  textarea {
+    height: 110px;
+  }
+
+  // Gform Multifile Uploader CSS
+  .gform_fileupload_multifile .gform_drop_area {
+    position: relative;
+    border: 1px dashed #fff;
+    border-radius: 4px;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    width: 360px;
+    margin: auto;
+  }
+
+  // Gform Multifile Uploader Select Files Btn
+  .gform_button_select_files {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(../images/add_file_btn_25x25.png);
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    margin-right: -90px;
+    font-size: 0;
+    border: 0;
+    color: #fff;
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    cursor: pointer;
+    filter: invert(1);
+  }
+
+  span.gform_drop_instructions {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 25px);
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+  }
+
+  // Multifile Uploader text preview
+  .ginput_preview {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: $secondary-fontstack;
+    text-align: left;
+  }
+
+  // Gform Errors
+  .validation_error {
+    width: 360px;
+    font-size: 11px;
+    line-height: 20px;
+    color: #fff;
+    background: #850e0e;
+    padding: 10px;
+    margin: 0 auto 20px;
+
+    &::before {
+      display: none;
+      content: '\f071';
+      font-family: $fa-fontstack;
+    }
+
+    svg {
+      margin-right: 6px;
+    }
+  }
+
+  .validation_message {
+    color: #fff;
+    margin: 9px 0 22px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  // Gform confirmation Message
+  .gform_confirmation_message {
+    color: black;
+    text-align: center;
+    line-height: 1.3rem;
+    font-size: 14px;
+  }
+}
+
+.gform_wrapper .hidden_label .gfield_label,
+.gform_wrapper label.hidden_sub_label,
+.gform_wrapper label.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.gform_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container input[type=text],
+.gform_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container select {
+  margin-bottom: 12px;
+}
+
+.ginput_container_select {
+  position: relative;
+
+  &::after {
+    display: none;
+    content: '\f107';
+    font-family: $fa-fontstack;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 22px;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+.gform_wrapper .left_label li.hidden_label input,
+.gform_wrapper .right_label li.hidden_label input {
+  margin-left: 3.7%;
+}
+
+.gform_wrapper .hidden_label input.large,
+.gform_wrapper .hidden_label select.large,
+.gform_wrapper .top_label input.large,
+.gform_wrapper .top_label select.large {
+  width: 100%;
+}

@@ -1,0 +1,92 @@
+/** Other pages */
+
+.page-content {
+  text-align: center;
+}
+
+.page-content__wrapper {
+  padding: 60px 0;
+}
+
+.page-content__body {
+  width: 500px;
+  margin: auto;
+}
+
+.page__title {
+  font-size: 48px;
+  font-size: 3rem;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.o_bg {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url(../images/background_6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  background-attachment: fixed;
+}
+
+/** Form */
+
+.aform {
+  input[type=email],
+  input[type=text],
+  textarea {
+    font-size: 11px;
+    text-align: center;
+    line-height: 24px;
+    padding: 5px;
+    border: 0;
+    color: #fff;
+    background: url(../images/input-text-360.png) 50% 100% no-repeat !important;
+    width: 360px;
+    margin: auto;
+    display: block;
+
+    &::-webkit-input-placeholder {
+      color: #ddd !important;
+    }
+
+    &::-moz-placeholder {
+      color: #ddd !important;
+    }
+
+    &:-ms-input-placeholder {
+      color: #ddd !important;
+    }
+
+    &:-moz-placeholder {
+      color: #ddd !important;
+    }
+  }
+
+  input[type=submit] {
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid $primary-color;
+    font-weight: bold;
+    color: $primary-color;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 20px auto 0;
+    display: block;
+    height: 50px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+}
+
+.aform__text {
+  font-size: 16px;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 30px;
+}

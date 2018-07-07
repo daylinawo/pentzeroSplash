@@ -4,3 +4,13 @@
 $theme-colors: (
   primary: #27ae60
 );
+
+$primary-color: #dba758;
+$secondary-color: darken($primary-color, 7%);
+
+$primary-fontstack: 'Karla', sans-serif;
+$secondary-fontstack: 'Oswald', sans-serif;
+$fa-fontstack: 'Font Awesome 5 Solid', sans-serif;
+
+$logo-size-width: 180px;
+$logo-size-sm-width: 180px;

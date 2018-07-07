@@ -12,11 +12,13 @@ import faInstagram from "@fortawesome/fontawesome-free-brands/faInstagram";
 import faYoutube from "@fortawesome/fontawesome-free-brands/faYoutube";
 import faAngleLeft from "@fortawesome/fontawesome-free-solid/faAngleLeft";
 import faAngleDown from "@fortawesome/fontawesome-free-solid/faAngleDown";
+import faEnvelope from "@fortawesome/fontawesome-free-solid/faEnvelope";
+
 import faExclamationTriangle from "@fortawesome/fontawesome-free-solid/faExclamationTriangle";
 
 fontawesome.config = {searchPseudoElements: true}
 
-fontawesome.library.add(faFacebookF, faTwitter, faInstagram, faYoutube, faAngleLeft, faAngleDown, faExclamationTriangle);
+fontawesome.library.add(faFacebookF, faTwitter, faInstagram, faYoutube, faAngleLeft, faAngleDown, faExclamationTriangle, faEnvelope);
 
 // Import everything from autoload
 import "./autoload/**/*"
