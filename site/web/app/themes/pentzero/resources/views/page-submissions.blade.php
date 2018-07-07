@@ -3,18 +3,18 @@
 
 @section('content')
 <div class="o_bg">
-	<div style="background: rgba(44, 44, 44, 0.84); min-height: 100vh;">
+	<div style="background: rgba(44, 44, 44, 0.81); min-height: 100vh;">
 	<div class="page-header page-header--opage page-header--submissions">
 		<a href="/index.php" class="nav-home"><i class="fas fa-angle-left"></i></a>
-		<a href="#" class="nav-newsletter"><i class="fas fa-envelope"></i> Newsletter</a>
+		<a href="#" class="nav-newsletter"><i class="fas fa-envelope"></i> Newsletter Sign up</a>
 		@include('partials.page-header')
 	</div>
 
 	<div class="page-content">
 		<div class="page-content__container">
 			<div class="page-content__wrapper">
+				<h1 class="page__title">Submissions</h1>
 				<div class="page-content__body">
-					<h1 class="page__title">Send in your content</h1>
 					<div class="aform aform__submissions">
 						<p class="aform__text">Fill out the form below to submit your content. All fields are required so please ensure that none are left blank.</p>
 				  		<div class="aform__wrapper">
@@ -33,6 +33,7 @@
 				<li><a href="/index/">Home</a></li>
 				<li><a href="/submissions/">Submissions</a></li>
 				<li><a href="/contact/">Contact Us</a></li>
+				<li><a href="/contact/">Terms & Conditions</a></li>
 			</ul>
 			 <div class="follow-group-container">
 				<ul class="follow-group">
@@ -42,6 +43,7 @@
 				  <li><a href="#" class="follow-btn follow-btn--ig"><i class="fab fa-instagram"></i></a></li>
 				</ul>
 			</div>
+        	<p style="font-size: 11px; margin: 0;">© Pentzero 2018</p>
 	    </div>
 	</div>
 </div>

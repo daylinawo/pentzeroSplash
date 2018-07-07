@@ -69,13 +69,9 @@
   right: 60px;
   transform: translateY(-50%);
   font-size: 14px;
+  font-weight: bold;
+  color: $primary-color;
   text-transform: uppercase;
   z-index: 1;
-  line-height: 130px;
-  height: 100%;
-  width: 140px;
-  color: $primary-color;
-  background: #000;
-  text-align: center;
 }
 

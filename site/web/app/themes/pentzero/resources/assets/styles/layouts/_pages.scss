@@ -5,7 +5,7 @@
 }
 
 .page-content__wrapper {
-  padding: 60px 0;
+  padding: 50px 0;
 }
 
 .page-content__body {
@@ -14,20 +14,22 @@
 }
 
 .page__title {
-  font-size: 48px;
-  font-size: 3rem;
+  font-size: 90px;
+  font-size: 5.625rem;
+  font-family: gravitas one, sans-serif;
+  font-weight: 300;
+  color: #dba758;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
   text-transform: capitalize;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-top: 0;
 }
 
 .o_bg {
   min-width: 100vw;
   min-height: 100vh;
-  background-image: url(../images/background_6.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left center;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANklEQVQYlWNYtWqVMQMSWLVqlTE2MQZcAhiS+CQImoTVZGyKsComWiHRVpPkGVyewqsLV4ADAEr5TuVwzxgzAAAAAElFTkSuQmCC) repeat, url(../images/paris.jpg) top center/cover;
   background-attachment: fixed;
 }
 
