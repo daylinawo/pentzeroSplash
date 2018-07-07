@@ -2,7 +2,7 @@
 
 
 @section('content')
-<div class="o_bg">
+<div class="o-bg o-bg__submissions">
 	<div style="background: rgba(44, 44, 44, 0.81); min-height: 100vh;">
 	<div class="page-header page-header--opage page-header--submissions">
 		<a href="/index.php" class="nav-home"><i class="fas fa-angle-left"></i></a>
@@ -13,8 +13,8 @@
 	<div class="page-content">
 		<div class="page-content__container">
 			<div class="page-content__wrapper">
-				<h1 class="page__title">Submissions</h1>
 				<div class="page-content__body">
+					<h1 class="page__title">Submissions</h1>
 					<div class="aform aform__submissions">
 						<p class="aform__text">Fill out the form below to submit your content. All fields are required so please ensure that none are left blank.</p>
 				  		<div class="aform__wrapper">

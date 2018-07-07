@@ -5,12 +5,7 @@
 }
 
 .page-content__wrapper {
-  padding: 50px 0;
-}
-
-.page-content__body {
-  width: 500px;
-  margin: auto;
+  padding: 35px 0;
 }
 
 .page__title {
@@ -26,11 +21,18 @@
   margin-top: 0;
 }
 
-.o_bg {
+.o-bg {
   min-width: 100vw;
   min-height: 100vh;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANklEQVQYlWNYtWqVMQMSWLVqlTE2MQZcAhiS+CQImoTVZGyKsComWiHRVpPkGVyewqsLV4ADAEr5TuVwzxgzAAAAAElFTkSuQmCC) repeat, url(../images/paris.jpg) top center/cover;
   background-attachment: fixed;
+}
+
+.o-bg__submissions {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANklEQVQYlWNYtWqVMQMSWLVqlTE2MQZcAhiS+CQImoTVZGyKsComWiHRVpPkGVyewqsLV4ADAEr5TuVwzxgzAAAAAElFTkSuQmCC) repeat, url(../images/paris.jpg) top center/cover;
+}
+
+.o-bg__contact-us {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANklEQVQYlWNYtWqVMQMSWLVqlTE2MQZcAhiS+CQImoTVZGyKsComWiHRVpPkGVyewqsLV4ADAEr5TuVwzxgzAAAAAElFTkSuQmCC) repeat, url(../images/diddy-phone-1280x960.png) top center/cover;
 }
 
 /** Form */
@@ -38,7 +40,8 @@
 .aform {
   input[type=email],
   input[type=text],
-  textarea {
+  textarea,
+  select {
     font-size: 11px;
     text-align: center;
     line-height: 24px;
@@ -67,6 +70,31 @@
     }
   }
 
+  .ginput_container_select {
+    position: relative;
+
+    &::after {
+      display: none;
+      content: '\f107';
+      font-family: $fa-fontstack;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      font-size: 22px;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+
+  .aform__wrapper {
+    width: 360px;
+    margin: auto;
+  }
+
   input[type=submit] {
     background: rgba(0, 0, 0, 0);
     border: 1px solid $primary-color;
@@ -90,5 +118,6 @@
   font-size: 16px;
   font-size: 1rem;
   color: #fff;
-  margin-bottom: 30px;
+  width: 450px;
+  margin: 0 auto 30px;
 }
