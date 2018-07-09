@@ -6,8 +6,6 @@
   @include('partials.page-header')
 </header>
 
-<p><?php echo get_home_url(); ?></p>
-
 <div class="slideshow-container">
   <div id="slideshow" class="slideshow">
     <div class="slideshow__item slideshow__item-1"></div>
@@ -34,10 +32,10 @@
       <div class="follow-group-container">
         <h4 class="follow-group--title">Follow us</h4>
         <ul class="follow-group">
-          <li><a href="#" class="follow-btn follow-btn--fb"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#" class="follow-btn follow-btn--yt"><i class="fab fa-youtube"></i></a></li>
-          <li><a href="#" class="follow-btn follow-btn--tw"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#" class="follow-btn follow-btn--ig"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com/Pentzero" class="follow-btn follow-btn--fb"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.youtube.com/pentzero" class="follow-btn follow-btn--yt"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="https://twitter.com/Pentzero" class="follow-btn follow-btn--tw"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/pentzero/" class="follow-btn follow-btn--ig"><i class="fab fa-instagram"></i></a></li>
         </ul>
       </div>
     </div>
