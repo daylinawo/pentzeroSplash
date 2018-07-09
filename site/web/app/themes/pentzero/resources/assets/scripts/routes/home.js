@@ -2,7 +2,7 @@ export default {
   init() {
   window.addEventListener("DOMContentLoaded", function(e) { // eslint-disable-line no-unused-vars
 
-    var slideShow = document.getElementById("module-media-slideshow");
+    var slideShow = document.getElementById("slideshow");
     var fadeComplete = function(e) { slideShow.appendChild(arr[0]); }; // eslint-disable-line no-unused-vars
     var arr = slideShow.getElementsByTagName('div');
     for(var i=0; i < arr.length; i++) {

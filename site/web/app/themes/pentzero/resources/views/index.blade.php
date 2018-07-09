@@ -6,9 +6,10 @@
   @include('partials.page-header')
 </header>
 
+<p><?php echo get_home_url(); ?></p>
 
-<div class="module-media-container">
-  <div id="module-media-slideshow" class="module-media-slideshow">
+<div class="slideshow-container">
+  <div id="slideshow" class="slideshow">
     <div class="slideshow__item slideshow__item-1"></div>
     <div class="slideshow__item slideshow__item-2"></div>
     <div class="slideshow__item slideshow__item-3"></div>
@@ -20,10 +21,14 @@
     <div class="slideshow__item slideshow__item-10"></div>
     <div class="slideshow__item slideshow__item-11"></div>
   </div>
-  <div class="module-media-c-wrapper">
-    <div class="module-media-card">
-      <h4 class="coming-soon-text">Coming soon</h4>
+  <div class="c-card-wrapper">
+    <div class="c-card">
+      <h4 class="c-card__coming-soon-text">Coming soon</h4>
       <div class="signup signup--home">
+        <h3 class="signup-title"> Subscribe</h3>
+        <p class="signup-text">
+          Sign up with your email and receive free news and updates
+        </p>
         <? echo do_shortcode('[mc4wp_form id="11"]'); ?>
       </div>
       <div class="follow-group-container">

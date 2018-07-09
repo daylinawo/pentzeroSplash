@@ -2,11 +2,43 @@
 
 
 @section('content')
+<div id="particle-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+</div>
 <div class="o-bg o-bg__submissions">
-	<div style="background: rgba(44, 44, 44, 0.81); min-height: 100vh;">
+	<div style="background: rgba(25, 25, 25, 0.69); min-height: 100vh;">
 	<div class="page-header page-header--opage page-header--submissions">
 		<a href="/index.php" class="nav-home"><i class="fas fa-angle-left"></i></a>
-		<a href="#" class="nav-newsletter"><i class="fas fa-envelope"></i> Newsletter Sign up</a>
+		<a href="#boxzilla-31" class="nav-newsletter"><i class="fas fa-envelope"></i> Newsletter Sign up</a>
 		@include('partials.page-header')
 	</div>
 

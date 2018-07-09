@@ -2,31 +2,64 @@
 
 
 @section('content')
+<div id="particle-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+</div>
 <div class="o-bg o-bg__contact-us">
-	<div style="background: rgba(44, 44, 44, 0.81); min-height: 100vh;">
-	<div class="page-header page-header--opage page-header--contact-us">
-		<a href="/index.php" class="nav-home"><i class="fas fa-angle-left"></i></a>
-		<a href="#" class="nav-newsletter"><i class="fas fa-envelope"></i> Newsletter Sign up</a>
-		@include('partials.page-header')
-	</div>
+	<div style="background: rgba(25, 25, 25, 0.69); min-height: 100vh; display: flex; flex-direction: column;">
+	<div class="group-container">
+		<div class="page-header page-header--opage page-header--contact-us">
+			<a href="/index.php" class="nav-home"><i class="fas fa-angle-left"></i></a>
+			<a href="#boxzilla-31" class="nav-newsletter"><i class="fas fa-envelope"></i> Newsletter Sign up</a>
+			@include('partials.page-header')
+		</div>
 
-	<div class="page-content">
-		<div class="page-content__container">
-			<div class="page-content__wrapper">
-				<div class="page-content__body">
-					<h1 class="page__title">Contact Us</h1>
-					<div class="aform aform__contact-us">
-						<p class="aform__text">Use the form below to send us a message</p>
-				  		<div class="aform__wrapper">
-				  			<? echo do_shortcode('[gravityform id="2" title="false" description="false"]'); ?>
-				  			<div class="clear"></div>
+		<div class="page-content">
+			<div class="page-content__container">
+				<div class="page-content__wrapper">
+					<div class="page-content__body">
+						<h1 class="page__title">Contact Us</h1>
+						<div class="aform aform__contact-us">
+							<p class="aform__text">Use the form below to send us a message</p>
+					  		<div class="aform__wrapper">
+					  			<? echo do_shortcode('[gravityform id="2" title="false" description="false"]'); ?>
+					  			<div class="clear"></div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
+    </div>
 	<div class="page-footer page-footer--opage page-footer--contact-us">
 		<div class="page-footer__wrapper">
 			<ul class="page-footer__links">

@@ -103,9 +103,9 @@ select {
   // Gform Multifile Uploader CSS
   .gform_fileupload_multifile .gform_drop_area {
     position: relative;
-    border: 1px dashed #fff;
+    border: 1px dashed #000;
     border-radius: 4px;
-    color: #fff;
+    color: #000;
     padding: 20px;
     text-align: center;
     background: rgba(0, 0, 0, 0);
@@ -127,7 +127,6 @@ select {
     width: 25px;
     padding: 0;
     cursor: pointer;
-    filter: invert(1);
   }
 
   span.gform_drop_instructions {
@@ -168,7 +167,7 @@ select {
   }
 
   .validation_message {
-    color: #fff;
+    color: #000;
     margin: 9px 0 22px;
     font-size: 13px;
     font-weight: bold;
@@ -176,7 +175,7 @@ select {
 
   // Gform confirmation Message
   .gform_confirmation_message {
-    color: black;
+    color: #000;
     text-align: center;
     line-height: 1.3rem;
     font-size: 14px;
