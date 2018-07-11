@@ -206,18 +206,27 @@
 /** Other pages footer */
 
 .page-footer--opage {
-  flex-shrink: 0;
-  padding: 30px 0;
-  margin: 0;
+  // flex-shrink: 0;
+  text-align: center;
+  margin-top: 80px;
+
+  @include media-breakpoint-up(xl) {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 60px;
+  }
 
   .follow-group-container {
-    margin: 30px auto;
-    text-align: center;
+    margin: 30px 0;
+
+    @include media-breakpoint-up(xl) {
+      text-align: right;
+    }
 
     .follow-group {
       li {
         display: inline-block;
-        margin-right: 6px;
 
         a {
           display: inline-block;
@@ -225,6 +234,8 @@
           height: 40px;
           border-radius: 50%;
           color: #fff;
+          text-align: center;
+          border: 1px solid #555;
 
           svg {
             font-size: 16px;
@@ -237,25 +248,21 @@
 }
 
 .page-footer__wrapper {
-  width: 450px;
   margin: auto;
-  text-align: center;
-}
-
-.page-footer__logo {
-  width: 150px;
-  margin: auto;
-  display: block;
 }
 
 .page-footer__links {
   margin: 0 auto 30px;
   width: auto;
-  text-align: center;
 
   li {
     display: inline-block;
-    margin-right: 25px;
+    margin-right: 11px;
+
+    @include media-breakpoint-up(xl) {
+      margin: 0;
+      display: block;
+    }
 
     &:last-child {
       margin-right: 0;
