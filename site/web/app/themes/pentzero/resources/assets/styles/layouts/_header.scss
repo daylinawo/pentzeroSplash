@@ -6,6 +6,8 @@
   @extend .nav-link;
 }
 
+// HEADER
+
 .page-header {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -18,10 +20,20 @@
   z-index: 30;
 }
 
-.page-header--opage {
+.page-header--page {
   width: 100%;
   position: relative;
+  background: #000;
+  margin-bottom: 40px;
 }
+
+.page-header__container {
+  max-width: 1360px;
+  position: relative;
+  margin: auto;
+}
+
+// LOGO
 
 .logo-wrapper {
   position: relative;
@@ -41,8 +53,9 @@
 .logo-link {
   width: $logo-size-sm-width;
   position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 
   @include media-breakpoint-up(sm) {
     width: $logo-size-width;

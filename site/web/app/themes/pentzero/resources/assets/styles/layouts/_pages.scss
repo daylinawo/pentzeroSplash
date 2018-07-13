@@ -1,108 +1,152 @@
 /** Other pages */
 
-.group-container {
-  flex: 1 0 auto;
-}
-
-.parent-container {
-  @include media-breakpoint-up(md) {
-    display: table;
-  }
-}
-
-.arrow {
-  background: url(https://png.icons8.com/ios/1600/long-arrow-left-filled.png) top / contain no-repeat;
-  position: absolute;
-  top: 50%;
-  right: -30%;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  filter: invert(1);
-  transform: translateY(-50%);
-  opacity: 0.2;
-}
-
-.left-col {
-  display: none;
-
-  @include media-breakpoint-up(md) {
-    display: table-cell;
-    width: 30vw;
-    height: 100vh;
-  }
-}
-
-.right-col {
-  @include media-breakpoint-up(md) {
-    display: table-cell;
-    width: 70vw;
-    min-height: 100vh;
-  }
-}
-
-.page-side-image--submissions {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANklEQVQYlWNYtWqVMQMSWLVqlTE2MQZcAhiS+CQImoTVZGyKsComWiHRVpPkGVyewqsLV4ADAEr5TuVwzxgzAAAAAElFTkSuQmCC) repeat, url(../images/paris.jpg) center/cover;
-}
-
-.page-side-image--contact-us {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANklEQVQYlWNYtWqVMQMSWLVqlTE2MQZcAhiS+CQImoTVZGyKsComWiHRVpPkGVyewqsLV4ADAEr5TuVwzxgzAAAAAElFTkSuQmCC) repeat, url(../images/diddy-phone-1280x960.png) center/cover;
-}
-
-.page-content {
+.page-container {
+  background: rgba(10, 10, 10, 0.55);
+  min-height: 100vh;
   position: relative;
-  text-align: center;
-}
-
-.page-content__container {
-  margin: 0 0 40px;
-}
-
-.page-content__wrapper {
-  margin-top: 20px;
-  padding: 0 20px;
-
-  @include media-breakpoint-up(sm) {
-    padding: 0 80px;
-  }
-
-  @include media-breakpoint-up(xl) {
-    padding: 0 30px;
-    width: 500px;
-  }
-}
-
-.page-content__body {
-  margin-top: 60px;
-}
-
-.page__title {
-  font-size: 60px;
-  font-size: 3.75rem;
-  font-family: $secondary-fontstack;
-  font-weight: bold;
-  color: $primary-color;
-  text-transform: capitalize;
-  margin-bottom: 30px;
-  margin-top: 0;
-}
-
-.page-title__image {
-  margin-bottom: 20px;
+  z-index: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .o-bg {
   min-width: 100vw;
   min-height: 100vh;
   background-attachment: fixed;
+  position: absolute;
+  filter: blur(4px);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .o-bg__submissions {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANklEQVQYlWNYtWqVMQMSWLVqlTE2MQZcAhiS+CQImoTVZGyKsComWiHRVpPkGVyewqsLV4ADAEr5TuVwzxgzAAAAAElFTkSuQmCC) repeat, url(../images/paris.jpg) center/cover;
+  background: url(../images/paris.jpg) bottom/cover;
 }
 
 .o-bg__contact-us {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANklEQVQYlWNYtWqVMQMSWLVqlTE2MQZcAhiS+CQImoTVZGyKsComWiHRVpPkGVyewqsLV4ADAEr5TuVwzxgzAAAAAElFTkSuQmCC) repeat, url(../images/diddy-phone-1280x960.png) center center/cover;
+  background: url(../images/diddy-phone-1280x960.png) center/cover;
+}
+
+.back-link {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.newsletter-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: $primary-color;
+  text-transform: uppercase;
+  z-index: 1;
+  padding: 20px 30px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 14px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border: 1px solid $primary-color;
+    padding: 10px 20px;
+
+    &::after {
+      content: ' Newsletter Sign up';
+    }
+  }
+
+  &:hover {
+    background: $primary-color;
+    color: #fff;
+  }
+}
+
+.p-card {
+  position: relative;
+  text-align: center;
+  margin: auto;
+}
+
+.p-card__container {
+  display: table;
+  height: 60vh;
+  background-color: #000;
+  border: 1px solid #555;
+  box-shadow: 0 0 10px;
+}
+
+.p-card-header {
+  display: table-cell;
+  width: 65%;
+  position: relative;
+
+  .image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+    border: 1px solid #dba758;
+    transform: translate(-50%, -50%);
+  }
+
+  .image--contact-us {
+    background: url(../images/diddy-phone-1280x960.png) bottom;
+  }
+
+  .image--submissions {
+    background: url(../images/paris.jpg) bottom/cover;
+  }
+}
+
+.p-card-body {
+  width: 35%;
+  display: table-cell;
+  background: #000;
+  padding: 30px;
+}
+
+.p-card-body__header {
+  .title {
+    font-size: 50px;
+    font-size: #{(50px / 16px)}rem;
+    font-family: $secondary-fontstack;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  .upper {
+    font-family: $primary-fontstack;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: $primary-color;
+    margin: 10px 0 20px;
+  }
+
+  .text {
+    font-size: 14px;
+    font-size: #{(14px / 16px)}rem;
+    color: #fff;
+    margin: 0 auto 30px;
+  }
 }
 
 /** Form */
@@ -182,61 +226,6 @@
       background-color: $primary-color;
       color: #fff;
     }
-  }
-}
-
-.aform__text {
-  font-size: 16px;
-  font-size: 1rem;
-  color: #fff;
-  margin: 0 auto 30px;
-}
-
-.nav-home {
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 30px;
-  text-transform: uppercase;
-  z-index: 1;
-  padding: 20px 30px;
-  background: #333;
-
-  @include media-breakpoint-up(md) {
-    top: 50%;
-    left: 60px;
-    transform: translateY(-50%);
-    padding: 0;
-    background: transparent;
-  }
-}
-
-.nav-newsletter {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 30px;
-  font-weight: bold;
-  color: $primary-color;
-  text-transform: uppercase;
-  z-index: 1;
-  padding: 20px 30px;
-
-  @include media-breakpoint-up(md) {
-    font-size: 14px;
-    top: 20px;
-    right: 60px;
-    border: 1px solid $primary-color;
-    padding: 20px;
-
-    &::after {
-      content: ' Newsletter Sign up';
-    }
-  }
-
-  &:hover {
-    background: $primary-color;
-    color: #fff;
   }
 }
 
