@@ -205,19 +205,55 @@
 
 /** Other pages footer */
 
-.page-footer--page {
-  margin-top: 40px;
-  text-align: center;
-  background-color: #000;
+.page-footer {
   width: 100%;
+  text-align: center;
+  border-top: 1px solid #444;
+  background: #333;
+  margin: 60px auto 0;
   flex-shrink: 0;
 
+  @include media-breakpoint-up(md) {
+    margin-top: 40px;
+    background: #000;
+    border: 0;
+  }
+
+  .footer-nav-container,
   .follow-group-container {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0;
+    margin: 0 auto 30px;
+
+    @include media-breakpoint-up(lg) {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .footer-nav-container {
+    left: 60px;
+  }
+
+  .follow-group-container {
+    right: 60px;
+  }
+
+  .footer-nav {
+    li {
+      display: inline-block;
+      margin-right: 11px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: bold;
+      }
+    }
   }
 
   .follow-group {
@@ -241,33 +277,28 @@
     }
   }
 
-  .page-footer__links {
-    margin: 0 auto 30px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+  .copyr {
+    font-size: 11px;
+    font-size: #{(11px / 16px)}rem;
 
-    li {
-      display: inline-block;
-      margin-right: 11px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      a {
-        text-transform: uppercase;
-        font-size: 11px;
-        font-weight: bold;
-      }
+    @include media-breakpoint-up(lg) {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
 
-.page-footer__wrapper {
-  margin: auto;
+.page-footer-wrapper {
   max-width: 1360px;
-  position: relative;
-  padding: 30px;
+  padding: 60px 0;
+  margin: auto;
+
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    padding: 0;
+    height: 80px;
+  }
 }

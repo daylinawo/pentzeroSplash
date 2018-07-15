@@ -78,6 +78,16 @@ select {
 
 /** GFORM */
 
+.tooltip-inner {
+  background-color: #fff;
+  color: #000;
+}
+
+.bs-tooltip-top .arrow::before,
+.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+  border-top-color: #fff;
+}
+
 .gform_wrapper {
   .gfield {
     margin-bottom: 15px;

@@ -13,6 +13,9 @@
 
 	<div class="p-card">
 		<div class="p-card__container">
+			<div class="p-card-header">
+				<div class="image image--submissions"></div>
+			</div>
 			<div class="p-card-body">
 				<div class="p-card-body__header">
 					<h4 class="upper">Send in your content</h4>
@@ -25,9 +28,6 @@
 			  			<div class="clear"></div>
 					</div>
 				</div>
-			</div>
-			<div class="p-card-header">
-				<div class="image image--submissions"></div>
 			</div>
 		</div>
 	</div>

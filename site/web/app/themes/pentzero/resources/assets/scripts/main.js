@@ -3,6 +3,9 @@ import 'jquery';
 
 
 import 'bootstrap/dist/js/bootstrap';
+// Import Jquery Validation
+import 'jquery-validation/dist/jquery.validate.min.js';
+import 'jquery-validation-bootstrap-tooltip/jquery-validate.bootstrap-tooltip.min.js';
 // base package
 import fontawesome from "@fortawesome/fontawesome";
 // Facebook and Twitter icons

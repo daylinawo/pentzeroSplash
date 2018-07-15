@@ -1,13 +1,17 @@
 /** Other pages */
 
 .page-container {
-  background: rgba(10, 10, 10, 0.55);
+  background: #000;
   min-height: 100vh;
   position: relative;
   z-index: 1;
   justify-content: center;
   display: flex;
   flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    background: rgba(49, 49, 49, 0.55);
+  }
 }
 
 .o-bg {
@@ -15,7 +19,7 @@
   min-height: 100vh;
   background-attachment: fixed;
   position: absolute;
-  filter: blur(4px);
+  filter: blur(4px) grayscale(1);
   top: 0;
   right: 0;
   bottom: 0;
@@ -23,7 +27,7 @@
 }
 
 .o-bg__submissions {
-  background: url(../images/paris.jpg) bottom/cover;
+  background: url(../images/paris_1.jpg) bottom/cover;
 }
 
 .o-bg__contact-us {
@@ -32,7 +36,7 @@
 
 .back-link {
   position: absolute;
-  left: 0;
+  left: 60px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 30px;
@@ -54,7 +58,7 @@
   @include media-breakpoint-up(md) {
     font-size: 14px;
     top: 50%;
-    right: 0;
+    right: 60px;
     transform: translateY(-50%);
     border: 1px solid $primary-color;
     padding: 10px 20px;
@@ -77,44 +81,71 @@
 }
 
 .p-card__container {
-  display: table;
-  height: 60vh;
   background-color: #000;
-  border: 1px solid #555;
-  box-shadow: 0 0 10px;
+  width: 100vw;
+
+  @include media-breakpoint-up(md) {
+    display: table;
+    padding: 60px;
+    width: auto;
+  }
 }
 
 .p-card-header {
-  display: table-cell;
-  width: 65%;
-  position: relative;
+  height: 300px;
+
+  @include media-breakpoint-up(md) {
+    display: table-cell;
+    width: 65%;
+    position: relative;
+  }
 
   .image {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    bottom: 0;
-    left: 50%;
-    width: calc(100% - 60px);
-    height: calc(100% - 60px);
-    border: 1px solid #dba758;
-    transform: translate(-50%, -50%);
+    height: 100%;
+
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      width: calc(100% - 60px);
+      height: calc(100% - 60px);
+      transform: translate(-50%, -50%);
+    }
   }
 
   .image--contact-us {
     background: url(../images/diddy-phone-1280x960.png) bottom;
+    background-position: bottom center;
+    background-size: cover;
+
+    @include media-breakpoint-up(md) {
+      background-position: center center;
+    }
   }
 
   .image--submissions {
-    background: url(../images/paris.jpg) bottom/cover;
+    background: url(../images/paris_1.jpg);
+    background-position: bottom center;
+    background-size: cover;
+
+    @include media-breakpoint-up(md) {
+      background-position: center center;
+    }
   }
 }
 
 .p-card-body {
-  width: 35%;
-  display: table-cell;
-  background: #000;
-  padding: 30px;
+  margin: 60px auto;
+
+  @include media-breakpoint-up(md) {
+    width: 35%;
+    display: table-cell;
+    padding: 60px;
+    padding-right: 30px;
+    margin: 0;
+  }
 }
 
 .p-card-body__header {
@@ -133,7 +164,7 @@
     font-family: $primary-fontstack;
     font-size: 16px;
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 700;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.2rem;

@@ -24,7 +24,10 @@
   width: 100%;
   position: relative;
   background: #000;
-  margin-bottom: 40px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 40px;
+  }
 }
 
 .page-header__container {
