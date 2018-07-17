@@ -52,7 +52,7 @@
             <div class="no-link-box-center">
               <h3 class="no-link-box__title no-link-box__title--about">About</h3>
                 <div class="no-link-box__subtitle">What is Pentzero?</div>
-                <p class="no-link-box__text">Pentzero.com is a media company mainly showcasing the affluent lifestyle of celebrity figures, high networth individuals and socialites. Bringing forth coverage in News, Luxury, Entertainment and Fashion.</p>
+                <p class="no-link-box__text">Pentzero is the leading lifestyle portal. Featuring Luxury, News, Entertainment, Fashion and more.</p>
             </div>
           </div>
         </div>

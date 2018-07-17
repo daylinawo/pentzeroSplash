@@ -5,9 +5,9 @@
 wordpress_sites:
   pentzero.com:
     site_hosts:
-      - canonical: pentzero.test
+      - canonical: www.pentzero.test
         redirects:
-          - www.pentzero.test
+          - pentzero.test
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     admin_email: admin@pentzero.test
     multisite:
