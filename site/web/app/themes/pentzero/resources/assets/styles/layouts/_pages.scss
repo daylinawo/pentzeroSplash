@@ -1,16 +1,26 @@
 /** Other pages */
 
 .page-container {
-  background: #000;
   min-height: 100vh;
   position: relative;
   z-index: 1;
   justify-content: center;
   display: flex;
   flex-direction: column;
+}
 
+.page-container--pagewform {
+  background: #000;
+}
+
+.page-container--thank-you {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.page-container--pagewform,
+.page-container--thank-you {
   @include media-breakpoint-up(md) {
-    background: rgba(49, 49, 49, 0.55);
+    background: rgba(170, 170, 170, 0.55);
   }
 }
 
@@ -44,60 +54,23 @@
   z-index: 1;
 }
 
-.newsletter-link {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 30px;
-  font-weight: bold;
-  color: $primary-color;
-  text-transform: uppercase;
-  z-index: 1;
-  padding: 20px 30px;
-
-  @include media-breakpoint-up(md) {
-    font-size: 14px;
-    top: 50%;
-    right: 60px;
-    transform: translateY(-50%);
-    border: 1px solid $primary-color;
-    padding: 10px 20px;
-
-    &::after {
-      content: ' Newsletter Sign up';
-    }
-  }
-
-  &:hover {
-    background: $primary-color;
-    color: #fff;
-  }
-}
-
 .p-card {
-  position: relative;
+  background-color: #000;
   text-align: center;
   margin: auto;
+  padding: 0;
 }
 
-.p-card__container {
-  background-color: #000;
-  width: 100vw;
-
-  @include media-breakpoint-up(md) {
-    display: table;
-    padding: 60px;
-    width: auto;
-  }
+.p-card-wrapper {
+  min-height: 700px;
 }
 
 .p-card-header {
-  height: 300px;
+  height: 400px;
 
-  @include media-breakpoint-up(md) {
-    display: table-cell;
-    width: 65%;
+  @include media-breakpoint-up(lg) {
     position: relative;
+    height: auto;
   }
 
   .image {
@@ -109,8 +82,8 @@
       right: 0;
       bottom: 0;
       left: 50%;
-      width: calc(100% - 60px);
-      height: calc(100% - 60px);
+      width: 100%;
+      height: 100%;
       transform: translate(-50%, -50%);
     }
   }
@@ -138,51 +111,82 @@
 
 .p-card-body {
   margin: 60px auto;
+  background: #000;
 
-  @include media-breakpoint-up(md) {
-    width: 35%;
-    display: table-cell;
-    padding: 60px;
-    padding-right: 30px;
+  @include media-breakpoint-up(lg) {
     margin: 0;
   }
 }
 
-.p-card-body__header {
-  .title {
-    font-size: 50px;
-    font-size: #{(50px / 16px)}rem;
-    font-family: $secondary-fontstack;
-    font-weight: bold;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    margin-top: 0;
-  }
+.title {
+  font-size: 44px;
+  font-size: #{(44px / 16px)}rem;
+  font-family: $secondary-fontstack;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
 
-  .upper {
-    font-family: $primary-fontstack;
-    font-size: 16px;
-    font-size: 1rem;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    color: $primary-color;
-    margin: 10px 0 20px;
+.upper {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: $primary-color;
+  margin: 5px 0 30px;
+}
+
+.text {
+  font-size: 14px;
+  font-size: #{(14px / 16px)}rem;
+  color: #fff;
+  margin: 0 auto 30px;
+}
+
+.thank-you {
+  text-align: center;
+  margin: auto;
+
+  .title {
+    margin-top: 60px;
   }
 
   .text {
-    font-size: 14px;
-    font-size: #{(14px / 16px)}rem;
-    color: #fff;
-    margin: 0 auto 30px;
+    margin-bottom: 10px;
+  }
+
+  hr {
+    width: 130px;
+    border-top: 1px solid #555;
+    margin: 30px auto;
+  }
+
+  .follow-group-container {
+    margin: 10px auto 60px;
+  }
+
+  .follow-group {
+    li a {
+      border: 1px solid #555;
+    }
+  }
+}
+
+.thank-you-content {
+  padding: 0 40px;
+
+  @include media-breakpoint-up(md) {
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
 
 /** Form */
 
-.aform {
+.p-card-form {
   input[type=email],
   input[type=text],
   textarea,
@@ -236,7 +240,7 @@
     }
   }
 
-  .aform__wrapper {
+  .p-card-form__wrapper {
     width: 360px;
     margin: auto;
   }

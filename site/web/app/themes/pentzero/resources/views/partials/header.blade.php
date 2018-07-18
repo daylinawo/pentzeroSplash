@@ -1,10 +1,6 @@
-<header class="banner">
-  <div class="container">
-    <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
-    <nav class="nav-primary">
-      @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
-      @endif
-    </nav>
-  </div>
-</header>
+<div class="page-header__container">
+	<div class="logo-wrapper">
+		<a href="/index.php" class="logo-link"></a>
+		<img src="<?= get_theme_file_uri(); ?>/resources/assets/images/logo.png" class="logo" />
+	</div>
+</div>

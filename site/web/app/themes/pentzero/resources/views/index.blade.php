@@ -3,7 +3,7 @@
 @section('content')
 
 <header class="page-header page-header--home">
-  @include('partials.page-header')
+  @include('partials.header')
 </header>
 
 <div class="slideshow-container">
