@@ -9,7 +9,7 @@
 
 	<div class="p-card container">
 		<div class="p-card-wrapper d-flex flex-column flex-lg-row">
-			<div class="p-card-header col-md-12 col-lg-6 col-xl-7 order-lg-2">
+			<div class="p-card-header col-md-12 col-lg-6 col-xl-7 order-lg-2 p-0">
 				<div class="image image--contact-us"></div>
 			</div>
 			<div class="p-card-body col-md-12 col-lg-6 col-xl-5 align-self-center order-lg-1">

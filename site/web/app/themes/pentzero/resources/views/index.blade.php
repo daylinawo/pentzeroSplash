@@ -8,16 +8,18 @@
 
 <div class="slideshow-container">
   <div id="slideshow" class="slideshow">
-    <div class="slideshow__item slideshow__item-1"></div>
-    <div class="slideshow__item slideshow__item-2"></div>
-    <div class="slideshow__item slideshow__item-3"></div>
-    <div class="slideshow__item slideshow__item-4"></div>
-    <div class="slideshow__item slideshow__item-5"></div>
-    <div class="slideshow__item slideshow__item-6"></div>
-    <div class="slideshow__item slideshow__item-7"></div>
-    <div class="slideshow__item slideshow__item-9"></div>
-    <div class="slideshow__item slideshow__item-10"></div>
-    <div class="slideshow__item slideshow__item-11"></div>
+    <div class="slide item-1"></div>
+    <div class="slide item-2"></div>
+    <div class="slide item-3"></div>
+    <div class="slide item-4"></div>
+    <div class="slide item-5"></div>
+    <div class="slide item-6"></div>
+    <div class="slide item-7"></div>
+    <div class="slide item-9"></div>
+    <div class="slide item-10"></div>
+    <div class="slide item-12"></div>
+    <div class="slide item-13"></div>
+    <div class="slide item-14"></div>
   </div>
   <div class="c-card-wrapper">
     <div class="c-card">

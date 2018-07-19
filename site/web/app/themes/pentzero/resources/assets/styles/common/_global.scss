@@ -233,11 +233,11 @@ a {
   height: 575px;
   position: relative;
 
-  .slideshow__item {
+  .slide {
     height: 575px;
     width: 100%;
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: top center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -249,48 +249,70 @@ a {
     }
   }
 
-  .slideshow__item-1 {
-    background-image: url(../images/background_1.jpg);
+  .item-1 {
+    background-image: url(../images/slide_1.jpg);
+    background-position: bottom center;
   }
 
-  .slideshow__item-2 {
-    background-image: url(../images/background_2.jpg);
+  .item-2 {
+    background-image: url(../images/slide_2.jpg);
+
+    @include media-breakpoint-up(md) {
+      background-position: 0 -330px;
+    }
   }
 
-  .slideshow__item-3 {
-    background-image: url(../images/background_3.jpg);
+  .item-3 {
+    background-image: url(../images/slide_3.jpg);
   }
 
-  .slideshow__item-4 {
-    background-image: url(../images/background_4.jpg);
+  .item-4 {
+    background-image: url(../images/slide_4.jpg);
+
+    @include media-breakpoint-up(md) {
+      background-position: 0 -330px;
+    }
   }
 
-  .slideshow__item-5 {
-    background-image: url(../images/background_5.jpg);
+  .item-5 {
+    background-image: url(../images/slide_5.jpg);
   }
 
-  .slideshow__item-6 {
-    background-image: url(../images/background_6.jpg);
+  .item-6 {
+    background-image: url(../images/slide_6.jpg);
   }
 
-  .slideshow__item-7 {
-    background-image: url(../images/background_7.jpg);
+  .item-7 {
+    background-image: url(../images/slide_7.jpg);
   }
 
-  .slideshow__item-8 {
-    background-image: url(../images/background_8.jpg);
+  .item-8 {
+    background-image: url(../images/slide_8.jpg);
   }
 
-  .slideshow__item-9 {
-    background-image: url(../images/background_9.jpg);
+  .item-9 {
+    background-image: url(../images/slide_9.jpg);
   }
 
-  .slideshow__item-10 {
-    background-image: url(../images/background_10.jpg);
+  .item-10 {
+    background-image: url(../images/slide_10.jpg);
   }
 
-  .slideshow__item-11 {
-    background-image: url(../images/background_11.jpg);
+  .item-11 {
+    background-image: url(../images/slide_11.jpg);
+  }
+
+  .item-12 {
+    background-image: url(../images/slide_12.jpg);
+  }
+
+  .item-13 {
+    background-image: url(../images/slide_13.jpg);
+    background-position: bottom center;
+  }
+
+  .item-14 {
+    background-image: url(../images/slide_14.jpg);
   }
 }
 
