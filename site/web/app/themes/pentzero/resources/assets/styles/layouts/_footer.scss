@@ -10,11 +10,9 @@
 }
 
 .home-footer__c-wrap {
-  padding: 0 20px;
   position: relative;
 
   @include media-breakpoint-up(lg) {
-    padding: 0 60px;
     max-width: 1440px;
     margin: auto;
   }
@@ -109,11 +107,17 @@
   padding-bottom: 30px;
 
   @include media-breakpoint-up(md) {
+    padding: 30px;
+    border: 1px solid #444;
     text-align: center;
   }
 
   @include media-breakpoint-up(lg) {
-    border: 1px solid #444;
+    padding: 0;
+    padding-bottom: 30px;
+  }
+
+  @include media-breakpoint-up(xl) {
     padding: 30px;
   }
 }

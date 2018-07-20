@@ -230,18 +230,14 @@ select {
   color: #000 !important;
 }
 
-#boxzilla-overlay {
-  background: rgba(94, 94, 94, 0.65) !important;
-}
-
 /** MAILCHIMP NEWSLETTER */
 
 .mc4wp-response {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .mc4wp-alert p {
-  color: #000;
+  color: #fff;
   font-size: 12px;
   font-size: #{(12px / 16px)}rem;
   font-weight: bold;
@@ -273,12 +269,13 @@ select {
   }
 
   .signup-input-email {
-    color: #fff;
+    color: #000;
     margin-bottom: 10px;
     background-color: #fff;
     border: 1px solid #fff;
 
     @include media-breakpoint-up(md) {
+      color: #fff;
       border: 1px solid #666;
       background-color: rgba(0, 0, 0, 0);
       margin-bottom: 0;
@@ -329,7 +326,6 @@ select {
   .signup--popup__body {
     padding: 60px 30px;
     width: 350px;
-    height: 480px;
 
     @include media-breakpoint-up(lg) {
       display: table-cell;
@@ -383,5 +379,9 @@ select {
       background-color: $primary-color;
       color: #fff;
     }
+  }
+
+  .mc4wp-alert p {
+    color: #000;
   }
 }
