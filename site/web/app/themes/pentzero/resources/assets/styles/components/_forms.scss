@@ -150,9 +150,9 @@ select {
 
   // Multifile Uploader text preview
   .ginput_preview {
-    margin-bottom: 10px;
-    font-size: 14px;
-    font-family: $secondary-fontstack;
+    margin-bottom: 3px;
+    font-size: 11px;
+    font-size: #{(11px / 16px)}rem;
     text-align: left;
   }
 
@@ -223,11 +223,15 @@ select {
 // Boxzilla
 
 .boxzilla {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .boxzilla-close-icon {
-  color: #000;
+  color: #000 !important;
+}
+
+#boxzilla-overlay {
+  background: rgba(94, 94, 94, 0.65) !important;
 }
 
 /** MAILCHIMP NEWSLETTER */
@@ -248,26 +252,6 @@ select {
 
 .signup-input {
   height: 65px;
-}
-
-.signup-input-submit {
-  color: #fff;
-  background-color: $primary-color;
-  border: 1px solid $primary-color;
-  text-transform: uppercase;
-  font-weight: bold;
-
-  &:hover {
-    background-color: $primary-color;
-    color: #fff;
-  }
-
-  @include media-breakpoint-up(md) {
-    color: $primary-color;
-    background-color: rgba(0, 0, 0, 0);
-    width: calc(25% - 10px);
-    margin-left: 5px;
-  }
 }
 
 .signup--home {
@@ -301,51 +285,103 @@ select {
       width: 75%;
     }
   }
+
+  .signup-input-submit {
+    color: #fff;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+
+    @include media-breakpoint-up(md) {
+      color: $primary-color;
+      background: rgba(0, 0, 0, 0);
+      width: calc(25% - 10px);
+      margin-left: 5px;
+    }
+  }
 }
 
 .signup--popup {
-  display: table;
-  width: 900px;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    display: table;
+    width: 900px;
+  }
 
   .signup--popup__img {
-    display: table-cell;
-    background: url(../images/slide_9.jpg) center top / cover;
+    background: url(../images/slide_2.jpg) right bottom / cover;
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: table-cell;
+      width: 50%;
+      height: 100%;
+    }
   }
 
   .signup--popup__body {
-    display: table-cell;
-    width: 60%;
-    padding: 100px 40px;
+    padding: 60px 30px;
+    width: 350px;
+    height: 480px;
+
+    @include media-breakpoint-up(lg) {
+      display: table-cell;
+      width: 50%;
+      height: auto;
+      padding: 100px 40px;
+    }
   }
 
   .signup-title {
     font-size: 44px;
     font-size: #{(44px / 16px)}rem;
+    font-weight: 400;
     line-height: 48px;
     line-height: #{(48px / 16px)}rem;
     text-transform: uppercase;
-    margin: 0 auto 10px;
+    margin: 0 auto 30px;
     color: #000;
 
     &::before {
       content: 'Subscribe To';
       display: block;
       color: $primary-color;
+      font-weight: 300;
+      letter-spacing: 1px;
     }
   }
 
   .signup-text {
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 18px;
+    font-size: #{(18px / 16px)}rem;
     color: #000;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .signup-input-email {
     background-color: #eee;
     border: 1px solid #eee;
+    margin-bottom: 15px;
     color: #000;
-    margin-bottom: 0;
-    width: 75%;
+  }
+
+  .signup-input-submit {
+    border: 1px solid $primary-color;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $primary-color;
+    background-color: rgba(0, 0, 0, 0);
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
   }
 }

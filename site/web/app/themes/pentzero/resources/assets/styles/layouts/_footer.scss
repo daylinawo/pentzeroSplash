@@ -208,14 +208,11 @@
 .page-footer {
   width: 100%;
   text-align: center;
-  background: #333;
-  margin: 60px auto 0;
+  background: #000;
   flex-shrink: 0;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
     margin-top: 40px;
-    background: #000;
-    border: 0;
   }
 
   .footer-nav-container,

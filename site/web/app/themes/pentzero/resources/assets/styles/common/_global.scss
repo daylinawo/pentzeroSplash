@@ -120,6 +120,11 @@ body {
   color: #fff;
 }
 
+b,
+strong {
+  font-weight: bold;
+}
+
 ol,
 ul {
   list-style: none;
@@ -258,7 +263,7 @@ a {
     background-image: url(../images/slide_2.jpg);
 
     @include media-breakpoint-up(md) {
-      background-position: 0 -330px;
+      background-position: 0 -280px;
     }
   }
 
@@ -270,7 +275,7 @@ a {
     background-image: url(../images/slide_4.jpg);
 
     @include media-breakpoint-up(md) {
-      background-position: 0 -330px;
+      background-position: 0 -280px;
     }
   }
 

@@ -19,7 +19,7 @@
 
 .page-container--pagewform,
 .page-container--thank-you {
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
     background: rgba(170, 170, 170, 0.55);
   }
 }
@@ -37,7 +37,7 @@
 }
 
 .o-bg__submissions {
-  background: url(../images/paris_1.jpg) bottom/cover;
+  background: url(../images/submissions_bg.jpg) top/cover;
 }
 
 .o-bg__contact-us {
@@ -62,7 +62,7 @@
 }
 
 .p-card-wrapper {
-  min-height: 700px;
+  min-height: 730px;
 }
 
 .p-card-header {
@@ -76,15 +76,13 @@
   .image {
     height: 100%;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       position: absolute;
-      top: 50%;
-      right: 0;
+      top: 0;
+      right: -1px;
       bottom: 0;
-      left: 50%;
       width: 100%;
       height: 100%;
-      transform: translate(-50%, -50%);
     }
   }
 
@@ -99,7 +97,7 @@
   }
 
   .image--submissions {
-    background: url(../images/paris_1.jpg);
+    background: url(../images/submissions_bg.jpg);
     background-position: bottom center;
     background-size: cover;
 
@@ -110,8 +108,11 @@
 }
 
 .p-card-body {
-  margin: 60px auto;
-  background: #000;
+  margin-top: 60px;
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 60px;
+  }
 
   @include media-breakpoint-up(lg) {
     margin: 0;
@@ -179,7 +180,7 @@
 .thank-you-content {
   padding: 0 40px;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
     background-color: rgba(0, 0, 0, 0.8);
   }
 }
@@ -219,6 +220,24 @@
     }
   }
 
+  input[type=submit] {
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid $primary-color;
+    font-weight: bold;
+    color: $primary-color;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 20px auto 0;
+    height: 50px;
+    width: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+
   .ginput_container_select {
     position: relative;
 
@@ -243,24 +262,6 @@
   .p-card-form__wrapper {
     width: 360px;
     margin: auto;
-  }
-
-  input[type=submit] {
-    background: rgba(0, 0, 0, 0);
-    border: 2px solid $primary-color;
-    font-weight: bold;
-    color: $primary-color;
-    text-transform: uppercase;
-    padding: 0;
-    margin: 20px auto 0;
-    display: block;
-    height: 50px;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $primary-color;
-      color: #fff;
-    }
   }
 }
 
